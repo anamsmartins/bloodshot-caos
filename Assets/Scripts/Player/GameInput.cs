@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameInput : MonoBehaviour {
-
     private PlayerInputActions playerInputActions;
 
     private void Awake() {
@@ -11,9 +9,16 @@ public class GameInput : MonoBehaviour {
         playerInputActions.Player.Enable();
     }
 
-
     public Vector2 GetMovementVectorNormalized() {
         Vector2 inputVector = playerInputActions.Player.Move.ReadValue<Vector2>();
         return inputVector.normalized;
+    }
+
+    public bool IsShooting() {
+        return playerInputActions.Player.Shoot.triggered;
+    }
+
+    public Vector2 GetMousePosition() {
+        return Mouse.current.position.ReadValue();
     }
 }
