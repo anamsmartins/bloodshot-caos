@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
@@ -14,31 +15,50 @@ public class Enemy : MonoBehaviour {
 
     private float timeBetweenShots;
     private List<Enemy> allEnemies;
+    private Vector2 direction;
+    private float playerDistance;
 
     void Start() {
         timeBetweenShots = startTimeBetweenShots;
+        // Initialize the list of all enemies in the scene
         allEnemies = new List<Enemy>(FindObjectsOfType<Enemy>());
     }
 
     void Update() {
-        Vector2 direction = Vector2.zero;
-        float playerDistance = Vector2.Distance(transform.position, player.position);
+        Move();
+        MoveAwayFromOtherEnemies();
 
-        // If enemy is far away it will move close to the player
-        if (playerDistance > stoppingDistance) {
-            direction = (player.position - transform.position).normalized;
-
-            // If it is near but not too near it will stop moving
-        } else if (playerDistance < stoppingDistance && playerDistance > retreatDistance) {
-            direction = Vector2.zero;
+        // Normalize direction to avoid faster movement diagonally
+        if (direction != Vector2.zero) {
+            direction = direction.normalized * speed * Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, transform.position + (Vector3)direction, speed * Time.deltaTime);
         }
 
-        // If it is too near it will back away
+        Shoot();
+        
+    }
+
+    private void Move() {
+        // Calculate movement direction
+        direction = Vector2.zero;
+        playerDistance = Vector2.Distance(transform.position, player.position);
+
+        // If enemy is far away, move close to the player
+        if (playerDistance > stoppingDistance) {
+            direction = (player.position - transform.position).normalized;
+        }
+        // If enemy is too close, move away from the player
         else if (playerDistance < retreatDistance) {
             direction = (transform.position - player.position).normalized;
         }
+        // If enemy is near but not too near, stop moving
+        else if (playerDistance <= stoppingDistance && playerDistance > retreatDistance) {
+            direction = Vector2.zero;
+        }
+    }
 
-        // Check distances to other enemies and move away if too close
+    private void MoveAwayFromOtherEnemies() {
+        // Move away from other enemies if too close
         foreach (Enemy otherEnemy in allEnemies) {
             if (otherEnemy != this) {
                 float otherEnemyDistance = Vector2.Distance(transform.position, otherEnemy.transform.position);
@@ -48,18 +68,18 @@ public class Enemy : MonoBehaviour {
                 }
             }
         }
+    }
 
-        // Normalize direction to avoid faster movement diagonally
-        if (direction != Vector2.zero) {
-            direction = direction.normalized * speed * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, transform.position + (Vector3)direction, speed * Time.deltaTime);
-        }
-
+    private void Shoot() {
+        // Shooting logic
         if (timeBetweenShots <= 0) {
-            Instantiate(projectile, transform.position, Quaternion.identity);
+            GameObject projectileInstance = Instantiate(projectile, transform.position, Quaternion.identity);
+            Projectile projectileScript = projectileInstance.GetComponent<Projectile>();
+            projectileScript.Initialize(player.position);
             timeBetweenShots = startTimeBetweenShots;
         } else {
             timeBetweenShots -= Time.deltaTime;
         }
+
     }
 }

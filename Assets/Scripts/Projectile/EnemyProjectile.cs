@@ -1,33 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
-{
+public class Projectile : MonoBehaviour {
     [SerializeField] private float speed;
-    private Transform player;
-    private Vector2 target;
+    private Vector2 direction;
 
-    private void Start() {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        target = new Vector2(player.position.x, player.position.y);
+    // Method to initialize the projectile's direction
+    public void Initialize(Vector2 targetPosition) {
+        // Calculate the direction towards the target
+        direction = (targetPosition - (Vector2)transform.position).normalized;
     }
 
     private void Update() {
-        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
-
-        if (transform.position.x == target.x && transform.position.y == target.y) {
-            DestoyProjectile();
-        }
+        // Move the projectile in the calculated direction
+        transform.position += (Vector3)direction * speed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+        // Destroy the projectile upon colliding with the player
         if (other.CompareTag("Player")) {
-            DestoyProjectile();
+            DestroyProjectile();
         }
     }
 
-    private void DestoyProjectile() {
+    private void DestroyProjectile() {
+        // Destroy the game object (projectile)
         Destroy(gameObject);
     }
 }
