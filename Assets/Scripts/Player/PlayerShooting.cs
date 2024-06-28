@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour {
@@ -8,7 +7,16 @@ public class PlayerShooting : MonoBehaviour {
     [SerializeField] private Transform shootPosition;
     [SerializeField] private GameInput gameInput;
 
+    [Header("Ammunition")]
+    [SerializeField] private int ammoCost;
+
+    private Player player;
+
     void Start() {
+        player = GetComponent<Player>();
+        if (player == null) {
+            Debug.LogError("Player component not found on PlayerShooting object.");
+        }
     }
 
     void Update() {
@@ -18,11 +26,15 @@ public class PlayerShooting : MonoBehaviour {
     }
 
     void Shoot() {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = (mousePosition - shootPosition.position);
+        if (player != null && player.UseBloodForShooting(ammoCost)) {
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 direction = (mousePosition - shootPosition.position).normalized;
 
-        GameObject projectile = Instantiate(playerProjectilePrefab, shootPosition.position, Quaternion.identity);
-        var playerProjectile = projectile.GetComponent<PlayerProjectile>();
-        playerProjectile.SetDirection(direction);
+            GameObject projectile = Instantiate(playerProjectilePrefab, shootPosition.position, Quaternion.identity);
+            var playerProjectile = projectile.GetComponent<PlayerProjectile>();
+            playerProjectile.SetDirection(direction);
+        } else {
+            Debug.Log("Not enough blood in the tank to shoot!");
+        }
     }
 }
