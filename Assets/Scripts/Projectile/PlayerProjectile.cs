@@ -6,10 +6,11 @@ public class PlayerProjectile : MonoBehaviour {
     [SerializeField] private int speed;
     [SerializeField] private int damage;
     private Vector2 direction;
+    private Animator myAnimator = null;
 
-    // Method to set the direction
-    public void SetDirection(Vector2 direction) {
-        this.direction = direction.normalized;
+    private void Awake()
+    {
+        myAnimator = GetComponent<Animator>();
     }
 
     private void Update() {
@@ -29,6 +30,12 @@ public class PlayerProjectile : MonoBehaviour {
         } else if (other.CompareTag("MapBoundary")) {
             DestroyProjectile();
         }
+    }
+
+    // Method to set the direction
+    public void SetDirection(Vector2 direction)
+    {
+        this.direction = direction.normalized;
     }
 
     private void DestroyProjectile() {

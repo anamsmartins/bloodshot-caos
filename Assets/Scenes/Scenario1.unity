@@ -1086,7 +1086,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerProjectilePrefab: {fileID: 4059073418233113821, guid: 8caf53fa43db06442b1686addbf36bff, type: 3}
   shootPosition: {fileID: 896576085}
-  gameInput: {fileID: 0}
+  gameInput: {fileID: 396449829}
+  ammoCost: 0
 --- !u!114 &1439309650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1099,8 +1100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7731133ae4058694587b5e9642072863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 0
   gameInput: {fileID: 396449829}
+  maxHealthPoints: 0
+  bloodTank: 0
+  healCost: 0
   moveSpeed: 7
 --- !u!50 &1439309651
 Rigidbody2D:
