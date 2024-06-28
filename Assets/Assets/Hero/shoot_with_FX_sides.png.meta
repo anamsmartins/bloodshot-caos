@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7422a0241583b7447a236cca55d24272
+guid: d7fa9387a2b6c2143b24d24568172b10
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 18
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,76 +110,181 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TX Struct 1_0
+      name: shoot_with_FX_sides_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 384
-        width: 8
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 7
+        y: 139
+        width: 38
+        height: 38
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30aa924cad42eba47b199faa8a8fa62a
-      internalID: 1652036670
+      spriteID: aac914532d1248a43822153ec67ff958
+      internalID: 1353070459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_1
+      name: shoot_with_FX_sides_1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 94
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221eadb4da743c14484ad7585d4646ff
+      internalID: -1751950026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot_with_FX_sides_2
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 48
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d3bff1164981b4fa6ef6f4ab60556a
+      internalID: -627791912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot_with_FX_sides_3
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf36362f6dbaae84686a198de037a25c
+      internalID: 275599929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot_with_FX_sides_4
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 6
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c743f241cfa30d4fbdac8071dd69784
+      internalID: -914469354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot_with_FX_sides_5
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 52
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b3f2708ec362f54cb23b918e958ef9d
+      internalID: -1712112808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot_with_FX_sides_6
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 97
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b67229aaa825c242834ac61a215678d
+      internalID: 1847094183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot_with_FX_sides_7
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 145
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ab0873698a61e42adec0edfe83fb79
+      internalID: -1796802726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot_with_FX_sides_8
       rect:
         serializedVersion: 2
         x: 88
-        y: 384
-        width: 8
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 500fc355c1f02c54b9630c8890461a87
-      internalID: -140813954
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Struct 1_2
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 384
-        width: 48
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3aa51d9a9a810b4282312ccb6b8206d
-      internalID: -1618629949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Struct 1_3
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 384
-        width: 8
-        height: 96
+        y: 134
+        width: 34
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ac4e0147f982ac46b4545174e752a03
-      internalID: -154720618
+      spriteID: 52a309a1b2871fb4bbbbe6b8c47488b8
+      internalID: 1875993321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_4
+      name: shoot_with_FX_sides_9
       rect:
         serializedVersion: 2
-        x: 185
-        y: 384
-        width: 8
-        height: 96
+        x: 88
+        y: 89
+        width: 34
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +313,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00d1258a3d15ed94e80a1fbe6da0dde7
-      internalID: 208515264
+      spriteID: 85c8b4527f9c79d44a55fea286d4ee7b
+      internalID: 784563155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_5
+      name: shoot_with_FX_sides_10
       rect:
         serializedVersion: 2
-        x: 136
-        y: 384
-        width: 49
-        height: 96
+        x: 88
+        y: 44
+        width: 34
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +334,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90c91a96543a502448674272d8a531a5
-      internalID: 1950117211
+      spriteID: 511fe4a160441d84fa724c9e764c6729
+      internalID: -1743261485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_6
+      name: shoot_with_FX_sides_11
       rect:
         serializedVersion: 2
-        x: 224
-        y: 384
-        width: 8
-        height: 96
+        x: 88
+        y: 0
+        width: 34
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,50 +355,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10615340e749bf24a9f6a48563dc6e95
-      internalID: -1883645459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Struct 1_7
-      rect:
-        serializedVersion: 2
-        x: 281
-        y: 384
-        width: 8
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a71b56add9ba39c4295e5bbacd02c18a
-      internalID: -204046714
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Struct 1_8
-      rect:
-        serializedVersion: 2
-        x: 232
-        y: 384
-        width: 49
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74aaef5affab1fe4dbb875325cf3ff4d
-      internalID: 2085989097
+      spriteID: 8d7d9fdf240de0641a670e83df809755
+      internalID: -71211318
       vertices: []
       indices: 
       edges: []
@@ -309,66 +372,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TX Struct 1_0: 1652036670
-      TX Struct 1_1: -140813954
-      TX Struct 1_10: 1862911204
-      TX Struct 1_11: 368943826
-      TX Struct 1_12: -1983174531
-      TX Struct 1_13: -604850823
-      TX Struct 1_14: 842822623
-      TX Struct 1_15: 399017138
-      TX Struct 1_16: -680212801
-      TX Struct 1_17: 1952052637
-      TX Struct 1_18: 769441038
-      TX Struct 1_19: -1376672681
-      TX Struct 1_2: -1618629949
-      TX Struct 1_20: -2104318200
-      TX Struct 1_21: -229449978
-      TX Struct 1_22: -1088345616
-      TX Struct 1_23: -525165049
-      TX Struct 1_24: -602748895
-      TX Struct 1_25: 1238705016
-      TX Struct 1_26: -1929939549
-      TX Struct 1_27: 1480767470
-      TX Struct 1_28: 552224874
-      TX Struct 1_29: -1358871927
-      TX Struct 1_3: -154720618
-      TX Struct 1_30: 1096278735
-      TX Struct 1_31: 1493910586
-      TX Struct 1_32: 1661511150
-      TX Struct 1_33: 544165450
-      TX Struct 1_34: -1541368158
-      TX Struct 1_35: 650829771
-      TX Struct 1_36: -1124113267
-      TX Struct 1_37: -276091159
-      TX Struct 1_38: -202658805
-      TX Struct 1_39: -773880030
-      TX Struct 1_4: 208515264
-      TX Struct 1_40: -32929168
-      TX Struct 1_41: 174554972
-      TX Struct 1_42: -926769336
-      TX Struct 1_43: -88387799
-      TX Struct 1_44: 1751369596
-      TX Struct 1_45: 1846302867
-      TX Struct 1_46: -1569222728
-      TX Struct 1_47: 1384147503
-      TX Struct 1_48: 1428639232
-      TX Struct 1_49: -579164574
-      TX Struct 1_5: 1950117211
-      TX Struct 1_50: 1281824385
-      TX Struct 1_51: 106654530
-      TX Struct 1_52: -1633251797
-      TX Struct 1_53: 2104761987
-      TX Struct 1_54: -1719628033
-      TX Struct 1_55: 311510156
-      TX Struct 1_56: -797239070
-      TX Struct 1_57: -1308580858
-      TX Struct 1_58: -1469160308
-      TX Struct 1_59: -946016651
-      TX Struct 1_6: -1883645459
-      TX Struct 1_7: -204046714
-      TX Struct 1_8: 2085989097
-      TX Struct 1_9: -210531275
+      shoot_with_FX_sides_0: 1353070459
+      shoot_with_FX_sides_1: -1751950026
+      shoot_with_FX_sides_10: -1743261485
+      shoot_with_FX_sides_11: -71211318
+      shoot_with_FX_sides_2: -627791912
+      shoot_with_FX_sides_3: 275599929
+      shoot_with_FX_sides_4: -914469354
+      shoot_with_FX_sides_5: -1712112808
+      shoot_with_FX_sides_6: 1847094183
+      shoot_with_FX_sides_7: -1796802726
+      shoot_with_FX_sides_8: 1875993321
+      shoot_with_FX_sides_9: 784563155
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

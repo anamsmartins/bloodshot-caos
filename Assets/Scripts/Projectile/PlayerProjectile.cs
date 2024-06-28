@@ -6,11 +6,9 @@ public class PlayerProjectile : MonoBehaviour {
     [SerializeField] private int speed;
     [SerializeField] private int damage;
     private Vector2 direction;
-    private Animator myAnimator = null;
 
     private void Awake()
     {
-        myAnimator = GetComponent<Animator>();
     }
 
     private void Update() {
