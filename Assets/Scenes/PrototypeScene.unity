@@ -630,7 +630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7731133ae4058694587b5e9642072863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 0
+  maxHealthPoints: 50
   gameInput: {fileID: 160128647}
   moveSpeed: 7
 --- !u!212 &641511208
