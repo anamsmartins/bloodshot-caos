@@ -632,11 +632,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameInput: {fileID: 160128647}
   maxHealthPoints: 20
-  bloodTank: 200
+  bloodTank: 30
   healCost: 7
   score: 0
   moveSpeed: 7
   healScore: 15
+  bloodPickUpScore: 0
 --- !u!212 &641511208
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -996,6 +997,7 @@ MonoBehaviour:
   dieScore: 100
   playerTransform: {fileID: 641511209}
   player: {fileID: 641511207}
+  bloodDropPrefab: {fileID: 2845103136914795202, guid: 1664079329748fa48a28b1e735e5bf6a, type: 3}
 --- !u!61 &921256699
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1178,6 +1180,7 @@ MonoBehaviour:
   dieScore: 100
   playerTransform: {fileID: 641511209}
   player: {fileID: 641511207}
+  bloodDropPrefab: {fileID: 2845103136914795202, guid: 1664079329748fa48a28b1e735e5bf6a, type: 3}
 --- !u!61 &1163445763
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1907,6 +1910,7 @@ MonoBehaviour:
   dieScore: 100
   playerTransform: {fileID: 641511209}
   player: {fileID: 641511207}
+  bloodDropPrefab: {fileID: 2845103136914795202, guid: 1664079329748fa48a28b1e735e5bf6a, type: 3}
 --- !u!50 &1654989998
 Rigidbody2D:
   serializedVersion: 4

@@ -17,14 +17,9 @@ public class Player : MonoBehaviour {
 
     [Header("Score")]
     [SerializeField] private int healScore;
+    [SerializeField] private int bloodPickUpScore;
 
     private bool isMoving;
-    private Animator myAnimator = null;
-
-    private void Awake()
-    {
-        myAnimator = GetComponent<Animator>();
-    }
 
     void Start() {
         currentHealthPoints = maxHealthPoints;
@@ -44,7 +39,6 @@ public class Player : MonoBehaviour {
             UseBloodForHealing(healCost);
         }
 
-        myAnimator.SetBool("IsMoving", isMoving);
     }
 
     public bool IsMoving() {
@@ -90,7 +84,12 @@ public class Player : MonoBehaviour {
         return false;
     }
 
-    public void AddScore(int ammount) {
-        score += ammount;
+    public void CollectBlood(int amount) {
+        bloodTank += amount;
+        AddScore(bloodPickUpScore);
+    }
+
+    public void AddScore(int amount) {
+        score += amount;
     }
 }

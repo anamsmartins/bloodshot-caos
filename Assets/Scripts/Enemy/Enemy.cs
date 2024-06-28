@@ -27,6 +27,9 @@ public class Enemy : MonoBehaviour {
     [SerializeField] private Transform playerTransform;
     [SerializeField] private Player player;
 
+    [Header("Blood Drop")]
+    [SerializeField] private GameObject bloodDropPrefab;
+
     private float timeBetweenShots;
     private List<Enemy> allEnemies;
     private Vector2 direction;
@@ -50,7 +53,6 @@ public class Enemy : MonoBehaviour {
         }
 
         Shoot();
-        
     }
 
     private void Move() {
@@ -95,7 +97,6 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-
     private void Shoot() {
         if (timeBetweenShots <= 0) {
             GameObject projectileInstance = Instantiate(projectile, transform.position, Quaternion.identity);
@@ -110,11 +111,17 @@ public class Enemy : MonoBehaviour {
     public void TakeDamage(float damageAmount) {
         currentHealthPoints -= damageAmount;
         player.AddScore(hitScore);
+        InstantiateBloodDrop(); // Spawn blood drop on hit
         StartCoroutine(FlashOnDamage());
         if (currentHealthPoints <= 0) {
             Die();
             player.AddScore(dieScore);
         }
+    }
+
+    private void InstantiateBloodDrop() {
+        Vector3 positionBehindEnemy = transform.position + new Vector3(0, 0, 1); 
+        Instantiate(bloodDropPrefab, positionBehindEnemy, Quaternion.identity);
     }
 
     private IEnumerator FlashOnDamage() {
@@ -129,5 +136,4 @@ public class Enemy : MonoBehaviour {
     private void Die() {
         Destroy(gameObject);
     }
-
 }
