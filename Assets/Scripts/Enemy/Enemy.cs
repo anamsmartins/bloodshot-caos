@@ -1,139 +1,126 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
-
     [Header("Enemy")]
-    [SerializeField] private int maxHealthPoints;
-    private float currentHealthPoints;
+    [SerializeField] private int maxHealth;
+    private float currentHealth;
 
-    [Header("Enemy Movement")]
-    [SerializeField] private int speed;
-    [SerializeField] private int stoppingDistance;
-    [SerializeField] private int retreatDistance;
-    [SerializeField] private int retreatFromOtherEnemiesDistance;
+    [Header("Movement")]
+    [SerializeField] private float speed;
+    [SerializeField] private float stoppingDistance;
+    [SerializeField] private float retreatDistance;
+    [SerializeField] private float avoidanceDistance;
 
-    [Header("Enemy Shooting")]
-    [SerializeField] private int startTimeBetweenShots;
-    [SerializeField] private GameObject projectile;
+    [Header("Shooting")]
+    [SerializeField] private float shotCooldown;
+    [SerializeField] private GameObject projectilePrefab;
 
-    [Header("Score System")]
-    [SerializeField] private int hitScore;
-    [SerializeField] private int dieScore;
+    [Header("Scoring")]
+    [SerializeField] private int scorePerHit;
+    [SerializeField] private int scorePerKill;
 
-    [Header("Player")]
+    [Header("References")]
     [SerializeField] private Transform playerTransform;
     [SerializeField] private Player player;
 
-    [Header("Blood Drop")]
+    [Header("Effects")]
     [SerializeField] private GameObject bloodDropPrefab;
 
-    private float timeBetweenShots;
+    private float shotTimer;
     private List<Enemy> allEnemies;
-    private Vector2 direction;
-    private float playerDistance;
+    private Vector2 movementDirection;
 
     void Start() {
-        timeBetweenShots = startTimeBetweenShots;
-        currentHealthPoints = maxHealthPoints;
-        // Initialize the list of all enemies in the scene
+        shotTimer = shotCooldown;
+        currentHealth = maxHealth;
         allEnemies = new List<Enemy>(FindObjectsOfType<Enemy>());
     }
 
     void Update() {
-        Move();
-        MoveAwayFromOtherEnemies();
-
-        // Normalize direction to avoid faster movement diagonally
-        if (direction != Vector2.zero) {
-            direction = direction.normalized * speed * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, transform.position + (Vector3)direction, speed * Time.deltaTime);
-        }
-
-        Shoot();
+        UpdateMovement();
+        HandleShooting();
     }
 
-    private void Move() {
-        // Calculate movement direction
-        direction = Vector2.zero;
-        playerDistance = Vector2.Distance(transform.position, playerTransform.position);
+    private void UpdateMovement() {
+        movementDirection = CalculateMovementDirection();
+        MoveAwayFromOtherEnemies();
 
-        // If enemy is far away, move close to the player
-        if (playerDistance > stoppingDistance) {
-            direction = (playerTransform.position - transform.position).normalized;
+        if (movementDirection != Vector2.zero) {
+            movementDirection.Normalize();
+            transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + movementDirection, speed * Time.deltaTime);
         }
-        // If enemy is too close, move away from the player
-        else if (playerDistance < retreatDistance) {
-            direction = (transform.position - playerTransform.position).normalized;
-        }
-        // If enemy is near but not too near, stop moving
-        else if (playerDistance <= stoppingDistance && playerDistance > retreatDistance) {
-            direction = Vector2.zero;
-        }
+    }
+
+    private Vector2 CalculateMovementDirection() {
+        float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
+
+        if (distanceToPlayer > stoppingDistance)
+            return (playerTransform.position - transform.position).normalized;
+
+        if (distanceToPlayer < retreatDistance)
+            return (transform.position - playerTransform.position).normalized;
+
+        return Vector2.zero;
     }
 
     private void MoveAwayFromOtherEnemies() {
-        // Temporary list to hold enemies that are still active
-        List<Enemy> activeEnemies = new List<Enemy>();
+        foreach (Enemy otherEnemy in allEnemies) {
+            if (otherEnemy == this || otherEnemy == null)
+                continue;
 
-        // Populate the temporary list with active enemies
-        foreach (Enemy enemy in allEnemies) {
-            if (enemy != null && enemy.gameObject != null) {
-                activeEnemies.Add(enemy);
+            float distanceToEnemy = Vector2.Distance(transform.position, otherEnemy.transform.position);
+
+            if (distanceToEnemy < avoidanceDistance) {
+                movementDirection += (Vector2)(transform.position - otherEnemy.transform.position).normalized;
             }
         }
+    }
 
-        // Move away from other enemies if too close
-        foreach (Enemy otherEnemy in activeEnemies) {
-            if (otherEnemy != this && otherEnemy != null && otherEnemy.gameObject != null) {
-                float otherEnemyDistance = Vector2.Distance(transform.position, otherEnemy.transform.position);
-                if (otherEnemyDistance < retreatFromOtherEnemiesDistance) {
-                    Vector2 awayFromEnemy = (transform.position - otherEnemy.transform.position).normalized;
-                    direction += awayFromEnemy;
-                }
-            }
+    private void HandleShooting() {
+        if (shotTimer <= 0f) {
+            Shoot();
+            shotTimer = shotCooldown;
+        } else {
+            shotTimer -= Time.deltaTime;
         }
     }
 
     private void Shoot() {
-        if (timeBetweenShots <= 0) {
-            GameObject projectileInstance = Instantiate(projectile, transform.position, Quaternion.identity);
-            Projectile projectileScript = projectileInstance.GetComponent<Projectile>();
-            projectileScript.Initialize(playerTransform.position);
-            timeBetweenShots = startTimeBetweenShots;
-        } else {
-            timeBetweenShots -= Time.deltaTime;
-        }
+        GameObject projectileInstance = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        Projectile projectileScript = projectileInstance.GetComponent<Projectile>();
+        projectileScript.Initialize(playerTransform.position);
     }
 
-    public void TakeDamage(float damageAmount) {
-        currentHealthPoints -= damageAmount;
-        player.AddScore(hitScore);
-        InstantiateBloodDrop(); // Spawn blood drop on hit
-        StartCoroutine(FlashOnDamage());
-        if (currentHealthPoints <= 0) {
+    public void TakeDamage(float damage) {
+        currentHealth -= damage;
+        player.AddScore(scorePerHit);
+        SpawnBloodDrop();
+
+        if (currentHealth <= 0) {
             Die();
-            player.AddScore(dieScore);
+        } else {
+            StartCoroutine(FlashOnDamage());
         }
     }
 
-    private void InstantiateBloodDrop() {
-        Vector3 positionBehindEnemy = transform.position + new Vector3(0, 0, 1); 
-        Instantiate(bloodDropPrefab, positionBehindEnemy, Quaternion.identity);
+    private void SpawnBloodDrop() {
+        Vector3 spawnPosition = transform.position + Vector3.back;
+        Instantiate(bloodDropPrefab, spawnPosition, Quaternion.identity);
     }
 
     private IEnumerator FlashOnDamage() {
-        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
-        if (renderer != null) {
-            renderer.color = Color.red;
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null) {
+            spriteRenderer.color = Color.red;
             yield return new WaitForSeconds(0.1f);
-            renderer.color = Color.white;
+            spriteRenderer.color = Color.white;
         }
     }
 
     private void Die() {
+        player.AddScore(scorePerKill);
         Destroy(gameObject);
     }
 }
