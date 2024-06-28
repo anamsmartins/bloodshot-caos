@@ -12,6 +12,12 @@ public class Player : MonoBehaviour {
     [SerializeField] private float moveSpeed = 7f;
 
     private bool isMoving;
+    private Animator myAnimator = null;
+
+    private void Awake()
+    {
+        myAnimator = GetComponent<Animator>();
+    }
 
     private void Update() {
         Vector2 inputVector = gameInput.GetMovementVectorNormalized();
@@ -22,6 +28,8 @@ public class Player : MonoBehaviour {
         transform.position += movement;
 
         isMoving = moveDir != Vector2.zero;
+
+        myAnimator.SetBool("IsMoving", isMoving);
 
     }
 
