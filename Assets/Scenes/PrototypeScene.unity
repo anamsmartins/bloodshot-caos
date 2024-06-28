@@ -631,10 +631,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameInput: {fileID: 160128647}
-  maxHealthPoints: 50
-  bloodTank: 20
-  healCost: 10
+  maxHealthPoints: 20
+  bloodTank: 30
+  healCost: 7
+  score: 0
   moveSpeed: 7
+  healScore: 15
+  bloodPickUpScore: 0
 --- !u!212 &641511208
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -780,7 +783,9 @@ MonoBehaviour:
   playerProjectilePrefab: {fileID: 4059073418233113821, guid: 8caf53fa43db06442b1686addbf36bff, type: 3}
   shootPosition: {fileID: 21998116}
   gameInput: {fileID: 160128647}
-  ammoCost: 5
+  player: {fileID: 641511207}
+  shotCost: 5
+  shotScore: 8
 --- !u!1 &652953094
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,14 +986,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68de9bcab1b9ea64f98198c1985a0426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 50
-  speed: 10
+  maxHealthPoints: 20
+  speed: 5
   stoppingDistance: 5
-  retreatDistance: 4
-  retreatFromOtherEnemiesDistance: 3
+  retreatDistance: 5
+  retreatFromOtherEnemiesDistance: 1
   startTimeBetweenShots: 2
   projectile: {fileID: 4059073418233113821, guid: 2cdb0a4dc320d7a459f9212aabd383bf, type: 3}
-  player: {fileID: 641511209}
+  hitScore: 20
+  dieScore: 100
+  playerTransform: {fileID: 641511209}
+  player: {fileID: 641511207}
+  bloodDropPrefab: {fileID: 2845103136914795202, guid: 1664079329748fa48a28b1e735e5bf6a, type: 3}
 --- !u!61 &921256699
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1160,14 +1169,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68de9bcab1b9ea64f98198c1985a0426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 50
-  speed: 10
+  maxHealthPoints: 20
+  speed: 5
   stoppingDistance: 5
-  retreatDistance: 4
-  retreatFromOtherEnemiesDistance: 2
+  retreatDistance: 5
+  retreatFromOtherEnemiesDistance: 1
   startTimeBetweenShots: 2
   projectile: {fileID: 4059073418233113821, guid: 2cdb0a4dc320d7a459f9212aabd383bf, type: 3}
-  player: {fileID: 641511209}
+  hitScore: 20
+  dieScore: 100
+  playerTransform: {fileID: 641511209}
+  player: {fileID: 641511207}
+  bloodDropPrefab: {fileID: 2845103136914795202, guid: 1664079329748fa48a28b1e735e5bf6a, type: 3}
 --- !u!61 &1163445763
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1886,14 +1899,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68de9bcab1b9ea64f98198c1985a0426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 50
-  speed: 10
+  maxHealthPoints: 20
+  speed: 5
   stoppingDistance: 5
-  retreatDistance: 4
-  retreatFromOtherEnemiesDistance: 2
+  retreatDistance: 5
+  retreatFromOtherEnemiesDistance: 1
   startTimeBetweenShots: 2
   projectile: {fileID: 4059073418233113821, guid: 2cdb0a4dc320d7a459f9212aabd383bf, type: 3}
-  player: {fileID: 641511209}
+  hitScore: 20
+  dieScore: 100
+  playerTransform: {fileID: 641511209}
+  player: {fileID: 641511207}
+  bloodDropPrefab: {fileID: 2845103136914795202, guid: 1664079329748fa48a28b1e735e5bf6a, type: 3}
 --- !u!50 &1654989998
 Rigidbody2D:
   serializedVersion: 4

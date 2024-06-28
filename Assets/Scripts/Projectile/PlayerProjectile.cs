@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerProjectile : MonoBehaviour {
-    [SerializeField] private float speed;
-    [SerializeField] private float damage;
+    [SerializeField] private int speed;
+    [SerializeField] private int damage;
     private Vector2 direction;
     private Animator myAnimator = null;
 

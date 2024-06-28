@@ -6,21 +6,29 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
 
     [Header("Enemy")]
-    [SerializeField] private float maxHealthPoints;
+    [SerializeField] private int maxHealthPoints;
     private float currentHealthPoints;
 
     [Header("Enemy Movement")]
-    [SerializeField] private float speed;
-    [SerializeField] private float stoppingDistance;
-    [SerializeField] private float retreatDistance;
-    [SerializeField] private float retreatFromOtherEnemiesDistance;
+    [SerializeField] private int speed;
+    [SerializeField] private int stoppingDistance;
+    [SerializeField] private int retreatDistance;
+    [SerializeField] private int retreatFromOtherEnemiesDistance;
 
     [Header("Enemy Shooting")]
-    [SerializeField] private float startTimeBetweenShots;
+    [SerializeField] private int startTimeBetweenShots;
     [SerializeField] private GameObject projectile;
 
-    [Header("")]
-    [SerializeField] private Transform player;
+    [Header("Score System")]
+    [SerializeField] private int hitScore;
+    [SerializeField] private int dieScore;
+
+    [Header("Player")]
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private Player player;
+
+    [Header("Blood Drop")]
+    [SerializeField] private GameObject bloodDropPrefab;
 
     private float timeBetweenShots;
     private List<Enemy> allEnemies;
@@ -45,21 +53,20 @@ public class Enemy : MonoBehaviour {
         }
 
         Shoot();
-        
     }
 
     private void Move() {
         // Calculate movement direction
         direction = Vector2.zero;
-        playerDistance = Vector2.Distance(transform.position, player.position);
+        playerDistance = Vector2.Distance(transform.position, playerTransform.position);
 
         // If enemy is far away, move close to the player
         if (playerDistance > stoppingDistance) {
-            direction = (player.position - transform.position).normalized;
+            direction = (playerTransform.position - transform.position).normalized;
         }
         // If enemy is too close, move away from the player
         else if (playerDistance < retreatDistance) {
-            direction = (transform.position - player.position).normalized;
+            direction = (transform.position - playerTransform.position).normalized;
         }
         // If enemy is near but not too near, stop moving
         else if (playerDistance <= stoppingDistance && playerDistance > retreatDistance) {
@@ -90,12 +97,11 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-
     private void Shoot() {
         if (timeBetweenShots <= 0) {
             GameObject projectileInstance = Instantiate(projectile, transform.position, Quaternion.identity);
             Projectile projectileScript = projectileInstance.GetComponent<Projectile>();
-            projectileScript.Initialize(player.position);
+            projectileScript.Initialize(playerTransform.position);
             timeBetweenShots = startTimeBetweenShots;
         } else {
             timeBetweenShots -= Time.deltaTime;
@@ -104,10 +110,18 @@ public class Enemy : MonoBehaviour {
 
     public void TakeDamage(float damageAmount) {
         currentHealthPoints -= damageAmount;
+        player.AddScore(hitScore);
+        InstantiateBloodDrop(); // Spawn blood drop on hit
         StartCoroutine(FlashOnDamage());
         if (currentHealthPoints <= 0) {
             Die();
+            player.AddScore(dieScore);
         }
+    }
+
+    private void InstantiateBloodDrop() {
+        Vector3 positionBehindEnemy = transform.position + new Vector3(0, 0, 1); 
+        Instantiate(bloodDropPrefab, positionBehindEnemy, Quaternion.identity);
     }
 
     private IEnumerator FlashOnDamage() {
@@ -122,5 +136,4 @@ public class Enemy : MonoBehaviour {
     private void Die() {
         Destroy(gameObject);
     }
-
 }
