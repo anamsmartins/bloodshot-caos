@@ -19,6 +19,12 @@ public class Player : MonoBehaviour {
     [SerializeField] private int healScore;
 
     private bool isMoving;
+    private Animator myAnimator = null;
+
+    private void Awake()
+    {
+        myAnimator = GetComponent<Animator>();
+    }
 
     void Start() {
         currentHealthPoints = maxHealthPoints;
@@ -37,6 +43,8 @@ public class Player : MonoBehaviour {
         if (gameInput.IsHealing()) {
             UseBloodForHealing(healCost);
         }
+
+        myAnimator.SetBool("IsMoving", isMoving);
     }
 
     public bool IsMoving() {
