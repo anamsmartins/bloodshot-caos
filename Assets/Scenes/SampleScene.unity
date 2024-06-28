@@ -741,7 +741,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &921256698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,7 +754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68de9bcab1b9ea64f98198c1985a0426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 0
+  maxHealthPoints: 0
   speed: 10
   stoppingDistance: 5
   retreatDistance: 4
@@ -920,7 +920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1163445762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -933,7 +933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68de9bcab1b9ea64f98198c1985a0426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 0
+  maxHealthPoints: 0
   speed: 10
   stoppingDistance: 5
   retreatDistance: 4
@@ -1308,7 +1308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68de9bcab1b9ea64f98198c1985a0426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 0
+  maxHealthPoints: 50
   speed: 10
   stoppingDistance: 5
   retreatDistance: 4

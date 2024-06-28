@@ -6,7 +6,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
 
     [Header("Enemy")]
-    [SerializeField] private float healthPoints;
+    [SerializeField] private float maxHealthPoints;
+    private float currentHealthPoints;
 
     [Header("Enemy Movement")]
     [SerializeField] private float speed;
@@ -28,6 +29,7 @@ public class Enemy : MonoBehaviour {
 
     void Start() {
         timeBetweenShots = startTimeBetweenShots;
+        currentHealthPoints = maxHealthPoints;
         // Initialize the list of all enemies in the scene
         allEnemies = new List<Enemy>(FindObjectsOfType<Enemy>());
     }
@@ -66,9 +68,19 @@ public class Enemy : MonoBehaviour {
     }
 
     private void MoveAwayFromOtherEnemies() {
+        // Temporary list to hold enemies that are still active
+        List<Enemy> activeEnemies = new List<Enemy>();
+
+        // Populate the temporary list with active enemies
+        foreach (Enemy enemy in allEnemies) {
+            if (enemy != null && enemy.gameObject != null) {
+                activeEnemies.Add(enemy);
+            }
+        }
+
         // Move away from other enemies if too close
-        foreach (Enemy otherEnemy in allEnemies) {
-            if (otherEnemy != this) {
+        foreach (Enemy otherEnemy in activeEnemies) {
+            if (otherEnemy != this && otherEnemy != null && otherEnemy.gameObject != null) {
                 float otherEnemyDistance = Vector2.Distance(transform.position, otherEnemy.transform.position);
                 if (otherEnemyDistance < retreatFromOtherEnemiesDistance) {
                     Vector2 awayFromEnemy = (transform.position - otherEnemy.transform.position).normalized;
@@ -78,8 +90,8 @@ public class Enemy : MonoBehaviour {
         }
     }
 
+
     private void Shoot() {
-        // Shooting logic
         if (timeBetweenShots <= 0) {
             GameObject projectileInstance = Instantiate(projectile, transform.position, Quaternion.identity);
             Projectile projectileScript = projectileInstance.GetComponent<Projectile>();
@@ -88,6 +100,27 @@ public class Enemy : MonoBehaviour {
         } else {
             timeBetweenShots -= Time.deltaTime;
         }
-
     }
+
+    public void TakeDamage(float damageAmount) {
+        currentHealthPoints -= damageAmount;
+        StartCoroutine(FlashOnDamage());
+        if (currentHealthPoints <= 0) {
+            Die();
+        }
+    }
+
+    private IEnumerator FlashOnDamage() {
+        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+        if (renderer != null) {
+            renderer.color = Color.red;
+            yield return new WaitForSeconds(0.1f);
+            renderer.color = Color.white;
+        }
+    }
+
+    private void Die() {
+        Destroy(gameObject);
+    }
+
 }

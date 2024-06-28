@@ -20,8 +20,14 @@ public class PlayerProjectile : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Enemy")) {
+            Enemy enemy = other.GetComponent<Enemy>();
+            if (enemy != null) {
+                // Deal damage to the enemy
+                enemy.TakeDamage(damage);
+            }
             DestroyProjectile();
-            // Add logic for what happens when the projectile hits an enemy
+        } else if (other.CompareTag("MapBoundary")) {
+            DestroyProjectile();
         }
     }
 
