@@ -3,52 +3,108 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    [SerializeField] private GameInput gameInput;
-
     [Header("Player")]
-    [SerializeField] private int maxHealthPoints;
-    private int currentHealthPoints;
     [SerializeField] private int bloodTank;
-    [SerializeField] private int healCost;
-    [SerializeField] private int score = 0;
-
-    [Header("Player Movement")]
     [SerializeField] private int moveSpeed = 7;
 
-    [Header("Score")]
-    [SerializeField] private int healScore;
-    [SerializeField] private int bloodPickUpScore;
+    [Header("Health")]
+    [SerializeField] private int maxHealth;
+    [SerializeField] private int healCost;
 
+    [Header("Scoring")]
+    [SerializeField] private int score;
+    [SerializeField] private int healScore;
+    [SerializeField] private int bloodPickupScore;
+
+    [Header("Shooting")]
+    [SerializeField] private GameObject playerProjectilePrefab;
+    [SerializeField] private Transform shootPosition;
+    [SerializeField] private int ammoCost;
+
+    [Header("Melee Attack")]
+    [SerializeField] private float meleeRange = 1f;
+    [SerializeField] private int meleeDamage = 10;
+
+    [Header("References")]
+    [SerializeField] private GameInput gameInput;
+
+    private int currentHealth;
     private bool isMoving;
 
     void Start() {
-        currentHealthPoints = maxHealthPoints;
+        currentHealth = maxHealth;
     }
 
-    private void Update() {
-        Vector2 inputVector = gameInput.GetMovementVectorNormalized();
-        Vector2 moveDir = new Vector2(inputVector.x, inputVector.y);
-        Vector3 movement = moveDir * moveSpeed * Time.deltaTime;
+    void Update() {
+        HandleMovement();
+        HandleHealing();
+        HandleAttacks();
+    }
 
-        // Apply the movement to the current position
+    private void HandleMovement() {
+        Vector2 inputVector = gameInput.GetMovementVectorNormalized();
+        Vector3 movement = new Vector3(inputVector.x, inputVector.y, 0) * moveSpeed * Time.deltaTime;
         transform.position += movement;
 
-        isMoving = moveDir != Vector2.zero;
+        isMoving = inputVector != Vector2.zero;
+    }
 
+    private void HandleHealing() {
         if (gameInput.IsHealing()) {
-            UseBloodForHealing(healCost);
+            TryHeal();
         }
+    }
 
+    private void HandleAttacks() {
+        if (gameInput.IsShooting()) {
+            ShootOrMelee();
+        }
+    }
+
+    private void ShootOrMelee() {
+        if (UseBloodForShooting(ammoCost)) {
+            Shoot();
+        } else {
+            MeleeAttack();
+        }
+    }
+
+    private void Shoot() {
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = (mousePosition - shootPosition.position).normalized;
+
+        GameObject projectile = Instantiate(playerProjectilePrefab, shootPosition.position, Quaternion.identity);
+        var playerProjectile = projectile.GetComponent<PlayerProjectile>();
+        playerProjectile.SetDirection(direction);
+    }
+
+    private void MeleeAttack() {
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, meleeRange);
+
+        foreach (Collider2D enemy in hitEnemies) {
+            if (enemy.CompareTag("Enemy")) {
+                Enemy enemyEntity = enemy.GetComponent<Enemy>();
+                if (enemyEntity != null) {
+                    enemyEntity.TakeDamage(meleeDamage);
+                }
+            }
+        }
+    }
+
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, meleeRange);
     }
 
     public bool IsMoving() {
         return isMoving;
     }
 
-    public void TakeDamage(int damageAmount) {
-        currentHealthPoints -= damageAmount;
+    public void TakeDamage(int damage) {
+        currentHealth -= damage;
         StartCoroutine(FlashOnDamage());
-        if (currentHealthPoints <= 0) {
+
+        if (currentHealth <= 0) {
             Die();
         }
     }
@@ -74,19 +130,17 @@ public class Player : MonoBehaviour {
         return false;
     }
 
-    public bool UseBloodForHealing(int healCost) {
-        if (bloodTank >= healCost && currentHealthPoints < maxHealthPoints) {
-            currentHealthPoints = maxHealthPoints;
+    private void TryHeal() {
+        if (bloodTank >= healCost && currentHealth < maxHealth) {
+            currentHealth = maxHealth;
             bloodTank -= healCost;
             AddScore(healScore);
-            return true;
         }
-        return false;
     }
 
     public void CollectBlood(int amount) {
         bloodTank += amount;
-        AddScore(bloodPickUpScore);
+        AddScore(bloodPickupScore);
     }
 
     public void AddScore(int amount) {

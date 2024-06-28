@@ -106,8 +106,8 @@ public class Enemy : MonoBehaviour {
     }
 
     private void SpawnBloodDrop() {
-        Vector3 spawnPosition = transform.position + Vector3.back;
-        Instantiate(bloodDropPrefab, spawnPosition, Quaternion.identity);
+        Vector3 positionBehindEnemy = transform.position + new Vector3(0, 0, 1);
+        Instantiate(bloodDropPrefab, positionBehindEnemy, Quaternion.identity);
     }
 
     private IEnumerator FlashOnDamage() {
