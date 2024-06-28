@@ -21,4 +21,8 @@ public class GameInput : MonoBehaviour {
     public Vector2 GetMousePosition() {
         return Mouse.current.position.ReadValue();
     }
+
+    public bool IsHealing() {
+        return playerInputActions.Player.Heal.triggered;
+    }
 }

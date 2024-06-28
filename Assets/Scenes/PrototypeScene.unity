@@ -630,8 +630,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7731133ae4058694587b5e9642072863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 50
   gameInput: {fileID: 160128647}
+  maxHealthPoints: 50
+  bloodTank: 20
+  healCost: 10
   moveSpeed: 7
 --- !u!212 &641511208
 SpriteRenderer:
@@ -778,8 +780,7 @@ MonoBehaviour:
   playerProjectilePrefab: {fileID: 4059073418233113821, guid: 8caf53fa43db06442b1686addbf36bff, type: 3}
   shootPosition: {fileID: 21998116}
   gameInput: {fileID: 160128647}
-  maxAmmo: 10
-  ammoCost: 1
+  ammoCost: 5
 --- !u!1 &652953094
 GameObject:
   m_ObjectHideFlags: 0

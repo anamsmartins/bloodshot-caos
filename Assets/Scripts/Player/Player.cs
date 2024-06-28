@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
+    [SerializeField] private GameInput gameInput;
 
     [Header("Player")]
     [SerializeField] private float maxHealthPoints;
     private float currentHealthPoints;
-    [SerializeField] private GameInput gameInput;
+    [SerializeField] private float bloodTank;
+    [SerializeField] private float healCost;
 
     [Header("Player Movement")]
     [SerializeField] private float moveSpeed = 7f;
@@ -28,6 +30,9 @@ public class Player : MonoBehaviour {
 
         isMoving = moveDir != Vector2.zero;
 
+        if (gameInput.IsHealing()) {
+            UseBloodForHealing(healCost);
+        }
     }
 
     public bool IsMoving() {
@@ -53,5 +58,22 @@ public class Player : MonoBehaviour {
 
     private void Die() {
         Destroy(gameObject);
+    }
+
+    public bool UseBloodForShooting(int amount) {
+        if (bloodTank >= amount) {
+            bloodTank -= amount;
+            return true;
+        }
+        return false;
+    }
+
+    public bool UseBloodForHealing(float healCost) {
+        if (bloodTank >= healCost && currentHealthPoints < maxHealthPoints) {
+            currentHealthPoints = maxHealthPoints;
+            bloodTank -= healCost;
+            return true;
+        }
+        return false;
     }
 }
