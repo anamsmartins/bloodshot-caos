@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7422a0241583b7447a236cca55d24272
+guid: 45dba81a8689f8548ace7eeb76646127
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 18
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,463 +110,505 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TX Struct 1_0
+      name: move with FX Sides_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 384
-        width: 8
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 7
+        y: 187
+        width: 30
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30aa924cad42eba47b199faa8a8fa62a
-      internalID: 1652036670
+      spriteID: a59f42dd1a276cd4c9770ffff348fdc4
+      internalID: -1679550032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_1
+      name: move with FX Sides_1
       rect:
         serializedVersion: 2
-        x: 88
-        y: 384
-        width: 8
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 7
+        y: 161
+        width: 30
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 500fc355c1f02c54b9630c8890461a87
-      internalID: -140813954
+      spriteID: 9827390bb6d070740b1e79d46e9083ff
+      internalID: -84390312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_2
+      name: move with FX Sides_2
       rect:
         serializedVersion: 2
-        x: 40
-        y: 384
-        width: 48
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 7
+        y: 135
+        width: 30
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3aa51d9a9a810b4282312ccb6b8206d
-      internalID: -1618629949
+      spriteID: bc9c78c90f2e26547a4f8448111a7c8f
+      internalID: -1496374251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_3
+      name: move with FX Sides_3
       rect:
         serializedVersion: 2
-        x: 128
-        y: 384
-        width: 8
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 7
+        y: 109
+        width: 30
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ac4e0147f982ac46b4545174e752a03
-      internalID: -154720618
+      spriteID: 17c4251a08799ba44bdeb0a15003a2dc
+      internalID: -1218877364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_4
+      name: move with FX Sides_4
       rect:
         serializedVersion: 2
-        x: 185
-        y: 384
-        width: 8
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 7
+        y: 84
+        width: 30
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00d1258a3d15ed94e80a1fbe6da0dde7
-      internalID: 208515264
+      spriteID: 7a48125d28312ca43853f3f832c75cb4
+      internalID: -1971047475
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_5
+      name: move with FX Sides_5
       rect:
         serializedVersion: 2
-        x: 136
-        y: 384
-        width: 49
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 7
+        y: 57
+        width: 30
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90c91a96543a502448674272d8a531a5
-      internalID: 1950117211
+      spriteID: 70064eb2d4fcebe469738494356ae75f
+      internalID: 1601033275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_6
+      name: move with FX Sides_6
       rect:
         serializedVersion: 2
-        x: 224
-        y: 384
-        width: 8
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 7
+        y: 31
+        width: 30
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10615340e749bf24a9f6a48563dc6e95
-      internalID: -1883645459
+      spriteID: c25145cc8e798fd48946c22a7dfab791
+      internalID: 207434619
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_7
+      name: move with FX Sides_7
       rect:
         serializedVersion: 2
-        x: 281
-        y: 384
-        width: 8
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 7
+        y: 5
+        width: 30
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a71b56add9ba39c4295e5bbacd02c18a
-      internalID: -204046714
+      spriteID: d0668d50d972be04ca7e2e0aaf961116
+      internalID: -787919854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_8
+      name: move with FX Sides_8
       rect:
         serializedVersion: 2
-        x: 232
-        y: 384
-        width: 49
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 41
+        y: 187
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74aaef5affab1fe4dbb875325cf3ff4d
-      internalID: 2085989097
+      spriteID: a59041375cc8d7e4ab03e4bf5f897b1a
+      internalID: 209977192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_9
+      name: move with FX Sides_9
       rect:
         serializedVersion: 2
-        x: 32
-        y: 256
-        width: 8
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 41
+        y: 160
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef7b4063583d6a343acfd86595668d03
-      internalID: -210531275
+      spriteID: 9a1bc63e453f87a4a8c8215ff0bcb029
+      internalID: 1225846036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_10
+      name: move with FX Sides_10
       rect:
         serializedVersion: 2
-        x: 40
-        y: 256
-        width: 48
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 41
+        y: 134
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 511561773462a73469be8aec96d90126
-      internalID: 1862911204
+      spriteID: 3b717d66976fbb043bb91e737806a3ea
+      internalID: 275399526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_11
+      name: move with FX Sides_11
       rect:
         serializedVersion: 2
-        x: 88
-        y: 256
-        width: 8
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 41
+        y: 108
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8abf12cbcae71bf439618185b117a4b6
-      internalID: 368943826
+      spriteID: 7419f77ee31e76245868ad3c652aab11
+      internalID: 280967362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_12
+      name: move with FX Sides_12
       rect:
         serializedVersion: 2
-        x: 128
-        y: 256
-        width: 8
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 41
+        y: 83
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf8e3652f063d4245b8033d0e4f67286
-      internalID: -1983174531
+      spriteID: e682bb8bf79e65e4eb047bf9feaa5392
+      internalID: -1572061568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_13
+      name: move with FX Sides_13
       rect:
         serializedVersion: 2
-        x: 136
-        y: 256
-        width: 49
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 41
+        y: 56
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c47b7f4bfe3c57347815527843eaf2da
-      internalID: -604850823
+      spriteID: 67d52d925d5894a46b578646a2a0b614
+      internalID: 357583343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_14
+      name: move with FX Sides_14
       rect:
         serializedVersion: 2
-        x: 185
-        y: 256
-        width: 8
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 41
+        y: 30
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9db97a06f81663846813d938bcb25cb4
-      internalID: 842822623
+      spriteID: 5b22e809b02684c4eabae3c69a44144a
+      internalID: -73461627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_15
+      name: move with FX Sides_15
       rect:
         serializedVersion: 2
-        x: 224
-        y: 256
-        width: 8
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 41
+        y: 4
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59d174cb8cbc41e4dabbc802a780f654
-      internalID: 399017138
+      spriteID: c331457905fd02443a22b5fb1fe9860f
+      internalID: -318647118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_16
+      name: move with FX Sides_16
       rect:
         serializedVersion: 2
-        x: 232
-        y: 256
-        width: 49
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 76
+        y: 4
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb368cf48c95a63449a79f79bc03e956
-      internalID: -680212801
+      spriteID: 666e2bc4786ec174cb2772aedabc9f2c
+      internalID: 1486017464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_17
+      name: move with FX Sides_17
       rect:
         serializedVersion: 2
-        x: 281
-        y: 256
-        width: 8
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 76
+        y: 30
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 249246da69d7d7543bdcbc68eaa661a7
-      internalID: 1952052637
+      spriteID: e3a7baa7b96a84c4d83799ce259847c5
+      internalID: -1554391338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_18
+      name: move with FX Sides_18
       rect:
         serializedVersion: 2
-        x: 416
-        y: 365
-        width: 64
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 76
+        y: 57
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c54fc6096ca05f04194b07e573b12f62
-      internalID: 769441038
+      spriteID: 7a2b221cb604e094ca81b22fda21b704
+      internalID: -1866637471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_19
+      name: move with FX Sides_19
       rect:
         serializedVersion: 2
-        x: 416
-        y: 320
-        width: 64
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 76
+        y: 83
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28617c7310241314f83c3dcc678200c9
-      internalID: -1376672681
+      spriteID: 2ee24f958c26ee64bbb6cc2145821141
+      internalID: -12484823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_20
+      name: move with FX Sides_20
       rect:
         serializedVersion: 2
-        x: 408
-        y: 466
-        width: 80
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 76
+        y: 109
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbe67efefbdcd154996fada8b72215ff
-      internalID: -2104318200
+      spriteID: 9064871aa45aa1e49b6e28cf65ad2f94
+      internalID: 735347796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Struct 1_21
+      name: move with FX Sides_21
       rect:
         serializedVersion: 2
-        x: 416
-        y: 421
-        width: 64
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 76
+        y: 134
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85168493ebb0e0d498b475d277373d1f
-      internalID: -229449978
+      spriteID: 3ff915513f8745847a900220abe39dc5
+      internalID: -1837354003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: move with FX Sides_22
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 161
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef79692c334ae164a84aa7670916f4ed
+      internalID: 1167431695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: move with FX Sides_23
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 187
+        width: 27
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 745bdc14e6c986e47b74cb8ef2fc9016
+      internalID: -305701599
       vertices: []
       indices: 
       edges: []
@@ -582,66 +624,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TX Struct 1_0: 1652036670
-      TX Struct 1_1: -140813954
-      TX Struct 1_10: 1862911204
-      TX Struct 1_11: 368943826
-      TX Struct 1_12: -1983174531
-      TX Struct 1_13: -604850823
-      TX Struct 1_14: 842822623
-      TX Struct 1_15: 399017138
-      TX Struct 1_16: -680212801
-      TX Struct 1_17: 1952052637
-      TX Struct 1_18: 769441038
-      TX Struct 1_19: -1376672681
-      TX Struct 1_2: -1618629949
-      TX Struct 1_20: -2104318200
-      TX Struct 1_21: -229449978
-      TX Struct 1_22: -1088345616
-      TX Struct 1_23: -525165049
-      TX Struct 1_24: -602748895
-      TX Struct 1_25: 1238705016
-      TX Struct 1_26: -1929939549
-      TX Struct 1_27: 1480767470
-      TX Struct 1_28: 552224874
-      TX Struct 1_29: -1358871927
-      TX Struct 1_3: -154720618
-      TX Struct 1_30: 1096278735
-      TX Struct 1_31: 1493910586
-      TX Struct 1_32: 1661511150
-      TX Struct 1_33: 544165450
-      TX Struct 1_34: -1541368158
-      TX Struct 1_35: 650829771
-      TX Struct 1_36: -1124113267
-      TX Struct 1_37: -276091159
-      TX Struct 1_38: -202658805
-      TX Struct 1_39: -773880030
-      TX Struct 1_4: 208515264
-      TX Struct 1_40: -32929168
-      TX Struct 1_41: 174554972
-      TX Struct 1_42: -926769336
-      TX Struct 1_43: -88387799
-      TX Struct 1_44: 1751369596
-      TX Struct 1_45: 1846302867
-      TX Struct 1_46: -1569222728
-      TX Struct 1_47: 1384147503
-      TX Struct 1_48: 1428639232
-      TX Struct 1_49: -579164574
-      TX Struct 1_5: 1950117211
-      TX Struct 1_50: 1281824385
-      TX Struct 1_51: 106654530
-      TX Struct 1_52: -1633251797
-      TX Struct 1_53: 2104761987
-      TX Struct 1_54: -1719628033
-      TX Struct 1_55: 311510156
-      TX Struct 1_56: -797239070
-      TX Struct 1_57: -1308580858
-      TX Struct 1_58: -1469160308
-      TX Struct 1_59: -946016651
-      TX Struct 1_6: -1883645459
-      TX Struct 1_7: -204046714
-      TX Struct 1_8: 2085989097
-      TX Struct 1_9: -210531275
+      move with FX Sides_0: -1679550032
+      move with FX Sides_1: -84390312
+      move with FX Sides_10: 275399526
+      move with FX Sides_11: 280967362
+      move with FX Sides_12: -1572061568
+      move with FX Sides_13: 357583343
+      move with FX Sides_14: -73461627
+      move with FX Sides_15: -318647118
+      move with FX Sides_16: 1486017464
+      move with FX Sides_17: -1554391338
+      move with FX Sides_18: -1866637471
+      move with FX Sides_19: -12484823
+      move with FX Sides_2: -1496374251
+      move with FX Sides_20: 735347796
+      move with FX Sides_21: -1837354003
+      move with FX Sides_22: 1167431695
+      move with FX Sides_23: -305701599
+      move with FX Sides_3: -1218877364
+      move with FX Sides_4: -1971047475
+      move with FX Sides_5: 1601033275
+      move with FX Sides_6: 207434619
+      move with FX Sides_7: -787919854
+      move with FX Sides_8: 209977192
+      move with FX Sides_9: 1225846036
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

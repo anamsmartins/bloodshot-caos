@@ -20,7 +20,12 @@ public class Player : MonoBehaviour {
     [SerializeField] private int bloodPickUpScore;
 
     private bool isMoving;
+    private bool isMovingHorizontally;
+    private bool isMovingUp;
+
     private Animator myAnimator;
+    private float horizontalDirection = 0;
+    private float verticalDirection = 0;
 
     private void Awake()
     {
@@ -34,31 +39,44 @@ public class Player : MonoBehaviour {
 
     private void Update() {
         Vector2 inputVector = gameInput.GetMovementVectorNormalized();
-        Vector2 moveDir = new Vector2(inputVector.x, inputVector.y);
+
+        horizontalDirection = inputVector.x;
+        verticalDirection = inputVector.y;
+
+        Vector2 moveDir = new Vector2(horizontalDirection, verticalDirection);
         Vector3 movement = moveDir * moveSpeed * Time.deltaTime;
 
         // Apply the movement to the current position
         transform.position += movement;
 
         isMoving = moveDir != Vector2.zero;
+        isMovingHorizontally = verticalDirection == 0;
+        isMovingUp = verticalDirection > 0;
 
         if (gameInput.IsHealing()) {
             UseBloodForHealing(healCost);
         }
 
-        myAnimator.SetBool("IsMoving", isMoving);
-    }
-
-    public bool IsMoving() {
-        return isMoving;
-    }
-
-    public void TakeDamage(int damageAmount) {
-        currentHealthPoints -= damageAmount;
-        StartCoroutine(FlashOnDamage());
-        if (currentHealthPoints <= 0) {
-            Die();
+        if (isMovingHorizontally && ShouldFlip())
+        {
+            Flip();
         }
+
+        myAnimator.SetBool("IsMoving", isMoving);
+        myAnimator.SetBool("IsMovingHorizontally", isMovingHorizontally);
+        myAnimator.SetBool("IsMovingUp", isMovingUp);
+    }
+
+    
+
+    private bool ShouldFlip()
+    {
+        return transform.right.x * horizontalDirection < 0;
+    }
+
+    private void Flip()
+    {
+        transform.right = -transform.right;
     }
 
     private IEnumerator FlashOnDamage() {
@@ -72,6 +90,21 @@ public class Player : MonoBehaviour {
 
     private void Die() {
         Destroy(gameObject);
+    }
+
+    public bool IsMoving()
+    {
+        return isMoving;
+    }
+
+    public void TakeDamage(int damageAmount)
+    {
+        currentHealthPoints -= damageAmount;
+        StartCoroutine(FlashOnDamage());
+        if (currentHealthPoints <= 0)
+        {
+            Die();
+        }
     }
 
     public bool UseBloodForShooting(int amount) {
