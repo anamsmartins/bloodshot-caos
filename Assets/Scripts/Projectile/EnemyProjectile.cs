@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
     [SerializeField] private float speed;
+    [SerializeField] private float damage;
     private Vector2 direction;
 
     // Method to initialize the projectile's direction

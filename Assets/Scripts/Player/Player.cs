@@ -3,8 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    [SerializeField] private float moveSpeed = 7f;
+
+    [Header("Player")]
+    [SerializeField] private float healthPoints;
     [SerializeField] private GameInput gameInput;
+
+    [Header("Player Movement")]
+    [SerializeField] private float moveSpeed = 7f;
 
     private bool isMoving;
 

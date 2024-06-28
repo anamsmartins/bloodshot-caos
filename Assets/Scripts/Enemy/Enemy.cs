@@ -4,14 +4,22 @@ using TMPro;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
+
+    [Header("Enemy")]
+    [SerializeField] private float healthPoints;
+
+    [Header("Enemy Movement")]
     [SerializeField] private float speed;
     [SerializeField] private float stoppingDistance;
     [SerializeField] private float retreatDistance;
     [SerializeField] private float retreatFromOtherEnemiesDistance;
-    [SerializeField] private Transform player;
 
+    [Header("Enemy Shooting")]
     [SerializeField] private float startTimeBetweenShots;
     [SerializeField] private GameObject projectile;
+
+    [Header("")]
+    [SerializeField] private Transform player;
 
     private float timeBetweenShots;
     private List<Enemy> allEnemies;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerProjectile : MonoBehaviour {
     [SerializeField] private float speed;
+    [SerializeField] private float damage;
     private Vector2 direction;
 
     // Method to set the direction
