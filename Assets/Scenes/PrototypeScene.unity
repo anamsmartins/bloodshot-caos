@@ -610,7 +610,6 @@ GameObject:
   - component: {fileID: 641511211}
   - component: {fileID: 641511210}
   - component: {fileID: 641511207}
-  - component: {fileID: 641511213}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -630,14 +629,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7731133ae4058694587b5e9642072863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameInput: {fileID: 160128647}
-  maxHealthPoints: 20
   bloodTank: 30
+  moveSpeed: 10
+  maxHealth: 30
   healCost: 10
   score: 0
-  moveSpeed: 10
   healScore: 15
-  bloodPickUpScore: 10
+  bloodPickupScore: 30
+  playerProjectilePrefab: {fileID: 4059073418233113821, guid: 8caf53fa43db06442b1686addbf36bff, type: 3}
+  shootPosition: {fileID: 21998116}
+  ammoCost: 5
+  meleeRange: 1
+  meleeDamage: 10
+  gameInput: {fileID: 160128647}
 --- !u!212 &641511208
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -768,25 +772,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &641511213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641511206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4321910dedaa8164c90878fa76dc7cf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerProjectilePrefab: {fileID: 4059073418233113821, guid: 8caf53fa43db06442b1686addbf36bff, type: 3}
-  shootPosition: {fileID: 21998116}
-  gameInput: {fileID: 160128647}
-  player: {fileID: 641511207}
-  ammoCost: 5
-  meleeRange: 1
-  meleeDamage: 2
 --- !u!1 &652953094
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,15 +972,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68de9bcab1b9ea64f98198c1985a0426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 20
+  maxHealth: 20
   speed: 5
   stoppingDistance: 5
   retreatDistance: 5
-  retreatFromOtherEnemiesDistance: 1
-  startTimeBetweenShots: 2
-  projectile: {fileID: 4059073418233113821, guid: 2cdb0a4dc320d7a459f9212aabd383bf, type: 3}
-  hitScore: 20
-  dieScore: 100
+  avoidanceDistance: 3
+  shotCooldown: 2
+  projectilePrefab: {fileID: 4059073418233113821, guid: 2cdb0a4dc320d7a459f9212aabd383bf, type: 3}
+  scorePerHit: 20
+  scorePerKill: 100
   playerTransform: {fileID: 641511209}
   player: {fileID: 641511207}
   bloodDropPrefab: {fileID: 2845103136914795202, guid: 1664079329748fa48a28b1e735e5bf6a, type: 3}
@@ -1170,15 +1155,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68de9bcab1b9ea64f98198c1985a0426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 20
+  maxHealth: 20
   speed: 5
   stoppingDistance: 5
   retreatDistance: 5
-  retreatFromOtherEnemiesDistance: 1
-  startTimeBetweenShots: 2
-  projectile: {fileID: 4059073418233113821, guid: 2cdb0a4dc320d7a459f9212aabd383bf, type: 3}
-  hitScore: 20
-  dieScore: 100
+  avoidanceDistance: 3
+  shotCooldown: 2
+  projectilePrefab: {fileID: 4059073418233113821, guid: 2cdb0a4dc320d7a459f9212aabd383bf, type: 3}
+  scorePerHit: 20
+  scorePerKill: 100
   playerTransform: {fileID: 641511209}
   player: {fileID: 641511207}
   bloodDropPrefab: {fileID: 2845103136914795202, guid: 1664079329748fa48a28b1e735e5bf6a, type: 3}
@@ -1900,15 +1885,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68de9bcab1b9ea64f98198c1985a0426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 20
+  maxHealth: 20
   speed: 5
   stoppingDistance: 5
   retreatDistance: 5
-  retreatFromOtherEnemiesDistance: 1
-  startTimeBetweenShots: 2
-  projectile: {fileID: 4059073418233113821, guid: 2cdb0a4dc320d7a459f9212aabd383bf, type: 3}
-  hitScore: 20
-  dieScore: 100
+  avoidanceDistance: 3
+  shotCooldown: 2
+  projectilePrefab: {fileID: 4059073418233113821, guid: 2cdb0a4dc320d7a459f9212aabd383bf, type: 3}
+  scorePerHit: 20
+  scorePerKill: 100
   playerTransform: {fileID: 641511209}
   player: {fileID: 641511207}
   bloodDropPrefab: {fileID: 2845103136914795202, guid: 1664079329748fa48a28b1e735e5bf6a, type: 3}
