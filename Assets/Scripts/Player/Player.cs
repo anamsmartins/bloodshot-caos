@@ -6,13 +6,17 @@ public class Player : MonoBehaviour {
     [SerializeField] private GameInput gameInput;
 
     [Header("Player")]
-    [SerializeField] private float maxHealthPoints;
-    private float currentHealthPoints;
-    [SerializeField] private float bloodTank;
-    [SerializeField] private float healCost;
+    [SerializeField] private int maxHealthPoints;
+    private int currentHealthPoints;
+    [SerializeField] private int bloodTank;
+    [SerializeField] private int healCost;
+    [SerializeField] private int score = 0;
 
     [Header("Player Movement")]
-    [SerializeField] private float moveSpeed = 7f;
+    [SerializeField] private int moveSpeed = 7;
+
+    [Header("Score")]
+    [SerializeField] private int healScore;
 
     private bool isMoving;
 
@@ -39,7 +43,7 @@ public class Player : MonoBehaviour {
         return isMoving;
     }
 
-    public void TakeDamage(float damageAmount) {
+    public void TakeDamage(int damageAmount) {
         currentHealthPoints -= damageAmount;
         StartCoroutine(FlashOnDamage());
         if (currentHealthPoints <= 0) {
@@ -68,12 +72,17 @@ public class Player : MonoBehaviour {
         return false;
     }
 
-    public bool UseBloodForHealing(float healCost) {
+    public bool UseBloodForHealing(int healCost) {
         if (bloodTank >= healCost && currentHealthPoints < maxHealthPoints) {
             currentHealthPoints = maxHealthPoints;
             bloodTank -= healCost;
+            AddScore(healScore);
             return true;
         }
         return false;
+    }
+
+    public void AddScore(int ammount) {
+        score += ammount;
     }
 }
