@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,7 +134,7 @@ GameObject:
   m_Layer: 3
   m_Name: ShootPosition
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -148,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 21998115}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -631,14 +630,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7731133ae4058694587b5e9642072863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameInput: {fileID: 160128647}
-  maxHealthPoints: 0
   bloodTank: 30
+  moveSpeed: 10
+  maxHealth: 2000
   healCost: 10
   score: 0
-  moveSpeed: 10
   healScore: 15
-  bloodPickUpScore: 0
+  bloodPickupScore: 30
+  playerProjectilePrefab: {fileID: 4059073418233113821, guid: 8caf53fa43db06442b1686addbf36bff, type: 3}
+  shootPosition: {fileID: 21998116}
+  ammoCost: 5
+  meleeRange: 1.2
+  meleeDamage: 10
+  gameInput: {fileID: 160128647}
 --- !u!212 &641511208
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -991,11 +995,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  speed: 5
+  speed: 0
   stoppingDistance: 5
   retreatDistance: 5
   avoidanceDistance: 3
-  shotCooldown: 2
+  shotCooldown: 1000
   projectilePrefab: {fileID: 4059073418233113821, guid: 2cdb0a4dc320d7a459f9212aabd383bf, type: 3}
   scorePerHit: 20
   scorePerKill: 100
@@ -1045,7 +1049,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.2, y: 1.2}
   m_EdgeRadius: 0
 --- !u!212 &921256700
 SpriteRenderer:
@@ -1174,11 +1178,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  speed: 5
+  speed: 0
   stoppingDistance: 5
   retreatDistance: 5
   avoidanceDistance: 3
-  shotCooldown: 2
+  shotCooldown: 1000
   projectilePrefab: {fileID: 4059073418233113821, guid: 2cdb0a4dc320d7a459f9212aabd383bf, type: 3}
   scorePerHit: 20
   scorePerKill: 100
@@ -1228,7 +1232,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.2, y: 1.2}
   m_EdgeRadius: 0
 --- !u!212 &1163445764
 SpriteRenderer:
@@ -1822,7 +1826,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.2, y: 1.2}
   m_EdgeRadius: 0
 --- !u!212 &1654989995
 SpriteRenderer:
@@ -1904,11 +1908,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  speed: 5
+  speed: 0
   stoppingDistance: 5
   retreatDistance: 5
   avoidanceDistance: 3
-  shotCooldown: 2
+  shotCooldown: 1000
   projectilePrefab: {fileID: 4059073418233113821, guid: 2cdb0a4dc320d7a459f9212aabd383bf, type: 3}
   scorePerHit: 20
   scorePerKill: 100
