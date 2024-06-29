@@ -170,46 +170,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 109236824}
     m_Modifications:
-    - target: {fileID: 1822195359636322773, guid: 3c4567a2a810101499305840ddc06201, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822195359636322773, guid: 3c4567a2a810101499305840ddc06201, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1887065917
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479321385894353589, guid: 3c4567a2a810101499305840ddc06201, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479321385894353589, guid: 3c4567a2a810101499305840ddc06201, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1887065917
-      objectReference: {fileID: 0}
-    - target: {fileID: 4322795946999921761, guid: 3c4567a2a810101499305840ddc06201, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4322795946999921761, guid: 3c4567a2a810101499305840ddc06201, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1887065917
-      objectReference: {fileID: 0}
-    - target: {fileID: 6063249179121473863, guid: 3c4567a2a810101499305840ddc06201, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6063249179121473863, guid: 3c4567a2a810101499305840ddc06201, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1887065917
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848728656528719671, guid: 3c4567a2a810101499305840ddc06201, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7848728656528719671, guid: 3c4567a2a810101499305840ddc06201, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1887065917
-      objectReference: {fileID: 0}
     - target: {fileID: 8175971909813344115, guid: 3c4567a2a810101499305840ddc06201, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.5
@@ -249,14 +209,6 @@ PrefabInstance:
     - target: {fileID: 8175971909813344115, guid: 3c4567a2a810101499305840ddc06201, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8289705135929719738, guid: 3c4567a2a810101499305840ddc06201, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8289705135929719738, guid: 3c4567a2a810101499305840ddc06201, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1887065917
       objectReference: {fileID: 0}
     - target: {fileID: 9220648990778318684, guid: 3c4567a2a810101499305840ddc06201, type: 3}
       propertyPath: m_Name
@@ -357,14 +309,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7731133ae4058694587b5e9642072863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameInput: {fileID: 1961496093}
-  maxHealthPoints: 0
   bloodTank: 0
+  moveSpeed: 7
+  maxHealth: 0
   healCost: 0
   score: 0
-  moveSpeed: 7
   healScore: 0
-  bloodPickUpScore: 0
+  bloodPickupScore: 0
+  playerProjectilePrefab: {fileID: 0}
+  shootPosition: {fileID: 0}
+  ammoCost: 0
+  meleeRange: 1
+  meleeDamage: 10
+  gameInput: {fileID: 1961496093}
 --- !u!50 &941378207
 Rigidbody2D:
   serializedVersion: 4
@@ -424,9 +381,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.49354088}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.5356163
 --- !u!212 &941378209
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -488,7 +445,7 @@ Transform:
   m_GameObject: {fileID: 941378203}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: 0, z: 0}
+  m_LocalPosition: {x: -7.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
