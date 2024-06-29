@@ -22,8 +22,8 @@ public class Enemy : MonoBehaviour {
     [SerializeField] private int scorePerKill;
 
     [Header("References")]
-    [SerializeField] private Transform playerTransform;
     [SerializeField] private Player player;
+    private Transform playerTransform;
 
     [Header("Effects")]
     [SerializeField] private GameObject bloodDropPrefab;
@@ -33,15 +33,27 @@ public class Enemy : MonoBehaviour {
     private Vector2 movementDirection;
 
     void Start() {
+        FindPlayer();
         shotTimer = shotCooldown;
         currentHealth = maxHealth;
         allEnemies = new List<Enemy>(FindObjectsOfType<Enemy>());
     }
-
+ 
     void Update() {
         UpdateMovement();
         HandleShooting();
     }
+
+    private void FindPlayer() {
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject != null) {
+            playerTransform = playerObject.transform;
+            player = playerObject.GetComponent<Player>();
+        } else {
+            Debug.LogError("Player not found! Make sure the player is tagged 'Player'.");
+        }
+    }
+
 
     private void UpdateMovement() {
         movementDirection = CalculateMovementDirection();
