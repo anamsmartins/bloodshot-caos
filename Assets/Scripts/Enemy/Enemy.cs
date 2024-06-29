@@ -88,9 +88,10 @@ public class Enemy : MonoBehaviour {
     }
 
     private void Shoot() {
+        Vector3 adjustedPosition = playerTransform.position + new Vector3(0, 0.5f, 0);
         GameObject projectileInstance = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         Projectile projectileScript = projectileInstance.GetComponent<Projectile>();
-        projectileScript.Initialize(playerTransform.position);
+        projectileScript.Initialize(adjustedPosition);
     }
 
     public void TakeDamage(float damage) {

@@ -607,7 +607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 641511209}
   - component: {fileID: 641511208}
-  - component: {fileID: 641511211}
+  - component: {fileID: 641511213}
   - component: {fileID: 641511210}
   - component: {fileID: 641511207}
   - component: {fileID: 641511212}
@@ -632,7 +632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloodTank: 30
   moveSpeed: 10
-  maxHealth: 2000
+  maxHealth: 30
   healCost: 10
   score: 0
   healScore: 15
@@ -738,8 +738,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &641511211
-CircleCollider2D:
+--- !u!95 &641511212
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641511206}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b547b7927cc5a0e448ab4b637ad34511, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!70 &641511213
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -770,30 +791,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.50418806}
-  serializedVersion: 2
-  m_Radius: 0.49406838
---- !u!95 &641511212
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641511206}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b547b7927cc5a0e448ab4b637ad34511, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_Offset: {x: 0, y: 0.5}
+  m_Size: {x: 1, y: 1.2}
+  m_Direction: 0
 --- !u!1 &652953094
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,11 +995,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  speed: 0
+  speed: 6
   stoppingDistance: 5
   retreatDistance: 5
   avoidanceDistance: 3
-  shotCooldown: 1000
+  shotCooldown: 2
   projectilePrefab: {fileID: 4059073418233113821, guid: 2cdb0a4dc320d7a459f9212aabd383bf, type: 3}
   scorePerHit: 20
   scorePerKill: 100
@@ -1178,11 +1178,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  speed: 0
+  speed: 6
   stoppingDistance: 5
   retreatDistance: 5
   avoidanceDistance: 3
-  shotCooldown: 1000
+  shotCooldown: 2
   projectilePrefab: {fileID: 4059073418233113821, guid: 2cdb0a4dc320d7a459f9212aabd383bf, type: 3}
   scorePerHit: 20
   scorePerKill: 100
@@ -1908,11 +1908,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  speed: 0
+  speed: 6
   stoppingDistance: 5
   retreatDistance: 5
   avoidanceDistance: 3
-  shotCooldown: 1000
+  shotCooldown: 2
   projectilePrefab: {fileID: 4059073418233113821, guid: 2cdb0a4dc320d7a459f9212aabd383bf, type: 3}
   scorePerHit: 20
   scorePerKill: 100
