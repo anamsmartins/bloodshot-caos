@@ -32,6 +32,7 @@ public class Player : MonoBehaviour {
     [SerializeField] private AudioClip hitAudioClip;
     [SerializeField] private AudioClip deathAudioClip;
     [SerializeField] private AudioClip healAudioClip;
+    [SerializeField] private AudioClip bloodPickUpAudioClip;
     private AudioSource audioSource = null;
 
     private int currentHealth;
@@ -209,6 +210,10 @@ public class Player : MonoBehaviour {
         audioSource.PlayOneShot(healAudioClip);
     }
 
+    private void playBloodPickUpAudioClip() {
+        audioSource.PlayOneShot(bloodPickUpAudioClip);
+    }
+
     public bool UseBloodForShooting(int amount) {
         if (bloodTank >= amount) {
             bloodTank -= amount;
@@ -229,6 +234,7 @@ public class Player : MonoBehaviour {
     public void CollectBlood(int amount) {
         bloodTank += amount;
         AddScore(bloodPickupScore);
+        playBloodPickUpAudioClip();
     }
 
     public void AddScore(int amount) {

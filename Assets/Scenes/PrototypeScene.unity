@@ -2480,9 +2480,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 993984980519418304, guid: d44cfdb29f8b3a440993b4312c5f7da3, type: 3}
+      propertyPath: ammoCost
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 993984980519418304, guid: d44cfdb29f8b3a440993b4312c5f7da3, type: 3}
       propertyPath: gameInput
       value: 
       objectReference: {fileID: 160128647}
+    - target: {fileID: 993984980519418304, guid: d44cfdb29f8b3a440993b4312c5f7da3, type: 3}
+      propertyPath: maxHealth
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 993984980519418304, guid: d44cfdb29f8b3a440993b4312c5f7da3, type: 3}
+      propertyPath: bloodPickUpAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 700e684d747f3134ab81f56c2572758a, type: 3}
     - target: {fileID: 4649898475614149385, guid: d44cfdb29f8b3a440993b4312c5f7da3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
