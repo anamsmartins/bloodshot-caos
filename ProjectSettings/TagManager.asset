@@ -14,8 +14,8 @@ TagManager:
   - Water
   - UI
   - Map
-  - 
-  - 
+  - Wall
+  - Stairs
   - 
   - 
   - 
@@ -46,6 +46,21 @@ TagManager:
   - name: Grass
     uniqueID: 1887065917
     locked: 0
+  - name: Shadow
+    uniqueID: 594231565
+    locked: 0
+  - name: Wall
+    uniqueID: 1602158833
+    locked: 0
+  - name: EnvrionmentProps
+    uniqueID: 390305373
+    locked: 0
+  - name: Plant
+    uniqueID: 660391581
+    locked: 0
   - name: Player
     uniqueID: 1746326655
+    locked: 0
+  - name: Tree
+    uniqueID: 3196590561
     locked: 0
