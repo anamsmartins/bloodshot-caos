@@ -6,12 +6,22 @@ public class PlayerProjectile : MonoBehaviour {
     [Header("Projectile")]
     [SerializeField] private int speed;
     [SerializeField] private int damage;
-    private Vector2 direction;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip shootAudioClip;
+    private AudioSource audioSource = null;
+
+    private Vector2 direction;
     private Animator myAnimator;
+
+    public void Initialize(Vector2 direction) {
+        SetDirection(direction);
+        PlayShootAudioClip();
+    }
 
     private void Awake() {
         myAnimator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update() {
@@ -42,11 +52,15 @@ public class PlayerProjectile : MonoBehaviour {
         DestroyProjectile();
     }
 
-    public void SetDirection(Vector2 newDirection) {
+    private void SetDirection(Vector2 newDirection) {
         direction = newDirection.normalized;
     }
 
     private void DestroyProjectile() {
         Destroy(gameObject);
+    }
+
+    private void PlayShootAudioClip() {
+        audioSource.PlayOneShot(shootAudioClip);
     }
 }

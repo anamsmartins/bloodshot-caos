@@ -28,6 +28,12 @@ public class Player : MonoBehaviour {
     [Header("References")]
     [SerializeField] private GameInput gameInput;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip hitAudioClip;
+    [SerializeField] private AudioClip deathAudioClip;
+    [SerializeField] private AudioClip healAudioClip;
+    private AudioSource audioSource = null;
+
     private int currentHealth;
 
     private bool isMoving;
@@ -41,6 +47,7 @@ public class Player : MonoBehaviour {
     private void Awake()
     {
         myAnimator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -127,10 +134,9 @@ public class Player : MonoBehaviour {
     private void Shoot() {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = (mousePosition - shootPosition.position).normalized;
-
-        GameObject projectile = Instantiate(playerProjectilePrefab, shootPosition.position, Quaternion.identity);
-        var playerProjectile = projectile.GetComponent<PlayerProjectile>();
-        playerProjectile.SetDirection(direction);
+        GameObject projectileInstance = Instantiate(playerProjectilePrefab, transform.position, Quaternion.identity);
+        PlayerProjectile projectileScript = projectileInstance.GetComponent<PlayerProjectile>();
+        projectileScript.Initialize(direction);
     }
 
     private void MeleeAttack() {
@@ -160,9 +166,12 @@ public class Player : MonoBehaviour {
         currentHealth -= damage;
         StartCoroutine(FlashOnDamage());
 
+
         if (currentHealth <= 0) {
             Die();
         }
+
+        PlayHitAudioClip();
     }
 
     private IEnumerator FlashOnDamage() {
@@ -176,7 +185,28 @@ public class Player : MonoBehaviour {
 
     private void Die() {
         //Destroy(gameObject);
+        PlayDeathAudioClip();
         gameObject.SetActive(false);
+    }
+
+    private void PlayDeathAudioClip()
+    {
+        if (deathAudioClip != null)
+        {
+            GameObject tempAudio = new GameObject("TempAudio");
+            AudioSource audioSource = tempAudio.AddComponent<AudioSource>();
+            audioSource.clip = deathAudioClip;
+            audioSource.Play();
+            Destroy(tempAudio, deathAudioClip.length);
+        }
+    }
+
+    private void PlayHitAudioClip() {
+        audioSource.PlayOneShot(hitAudioClip);
+    }
+
+    private void playHealAudioClip() {
+        audioSource.PlayOneShot(healAudioClip);
     }
 
     public bool UseBloodForShooting(int amount) {
@@ -192,6 +222,7 @@ public class Player : MonoBehaviour {
             currentHealth = maxHealth;
             bloodTank -= healCost;
             AddScore(healScore);
+            playHealAudioClip();
         }
     }
 

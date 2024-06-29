@@ -1,14 +1,23 @@
 using UnityEngine;
 
-public class Projectile : MonoBehaviour {
+public class EnemyProjectile : MonoBehaviour {
     [Header("Projectile")]
     [SerializeField] private int speed;
     [SerializeField] private int damage;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip shootAudioClip;
+    private AudioSource audioSource = null;
+
     private Vector2 direction;
+
+    private void Awake() {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public void Initialize(Vector2 targetPosition) {
         SetDirection(targetPosition);
+        PlayShootAudioClip();
     }
 
     private void SetDirection(Vector2 targetPosition) {
@@ -45,5 +54,9 @@ public class Projectile : MonoBehaviour {
 
     private void DestroyProjectile() {
         Destroy(gameObject);
+    }
+
+    private void PlayShootAudioClip() {
+        audioSource.PlayOneShot(shootAudioClip);
     }
 }

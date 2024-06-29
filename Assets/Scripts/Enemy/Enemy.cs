@@ -28,9 +28,18 @@ public class Enemy : MonoBehaviour {
     [Header("Effects")]
     [SerializeField] private GameObject bloodDropPrefab;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip hitAudioClip;
+    [SerializeField] private AudioClip deathAudioClip;
+    private AudioSource audioSource = null;
+
     private float shotTimer;
     private List<Enemy> allEnemies;
     private Vector2 movementDirection;
+
+    private void Awake() {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Start() {
         FindPlayer();
@@ -102,7 +111,7 @@ public class Enemy : MonoBehaviour {
     private void Shoot() {
         Vector3 adjustedPosition = playerTransform.position + new Vector3(0, 0.5f, 0);
         GameObject projectileInstance = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-        Projectile projectileScript = projectileInstance.GetComponent<Projectile>();
+        EnemyProjectile projectileScript = projectileInstance.GetComponent<EnemyProjectile>();
         projectileScript.Initialize(adjustedPosition);
     }
 
@@ -110,6 +119,7 @@ public class Enemy : MonoBehaviour {
         currentHealth -= damage;
         player.AddScore(scorePerHit);
         SpawnBloodDrop();
+        PlayHitAudioClip();
 
         if (currentHealth <= 0) {
             Die();
@@ -134,6 +144,21 @@ public class Enemy : MonoBehaviour {
 
     private void Die() {
         player.AddScore(scorePerKill);
+        PlayDeathAudioClip();
         Destroy(gameObject);
+    }
+
+    private void PlayDeathAudioClip() {
+        if (deathAudioClip != null) {
+            GameObject tempAudio = new GameObject("TempAudio");
+            AudioSource audioSource = tempAudio.AddComponent<AudioSource>();
+            audioSource.clip = deathAudioClip;
+            audioSource.Play();
+            Destroy(tempAudio, deathAudioClip.length);
+        }
+    }
+
+    private void PlayHitAudioClip() {
+        audioSource.PlayOneShot(hitAudioClip);
     }
 }
