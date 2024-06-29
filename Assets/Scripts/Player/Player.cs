@@ -126,8 +126,10 @@ public class Player : MonoBehaviour {
 
     private void ShootOrMelee() {
         if (UseBloodForShooting(ammoCost)) {
+            myAnimator.SetBool("IsShooting", true);
             Shoot();
-        } else {
+        }
+        else {
             MeleeAttack();
         }
     }
