@@ -133,6 +133,17 @@
                 },
                 {
                     "name": "",
+                    "id": "ebf68eb5-8761-4326-ab39-c40c0b11fb9e",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Heal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "04198de1-9d24-4d33-ba77-e8498cb930a1",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
