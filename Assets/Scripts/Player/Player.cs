@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
@@ -60,6 +61,7 @@ public class Player : MonoBehaviour {
     private bool canShoot = true;
 
     private TMP_Text gameScoreText = null;
+    private Coroutine fadeGameScoreCoroutine = null;
 
     private void Awake()
     {
@@ -239,7 +241,7 @@ public class Player : MonoBehaviour {
     }
 
     private void OnDrawGizmosSelected() {
-        Gizmos.color = Color.red;
+        Gizmos.color = UnityEngine.Color.red;
         Vector3 newPosition = transform.position + new Vector3(0, 0.5f, 0);
         Gizmos.DrawWireSphere(newPosition, meleeRange);
     }
@@ -263,9 +265,9 @@ public class Player : MonoBehaviour {
     private IEnumerator FlashOnDamage() {
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         if (renderer != null) {
-            renderer.color = Color.red;
+            renderer.color = UnityEngine.Color.red;
             yield return new WaitForSeconds(0.1f);
-            renderer.color = Color.white;
+            renderer.color = UnityEngine.Color.white;
         }
     }
 
@@ -303,18 +305,33 @@ public class Player : MonoBehaviour {
     {
         gameScoreText.text = "Score: " + score.ToString();
 
-        if (!gameScorePanel.activeSelf)
+        if (!gameScorePanel.activeSelf || fadeGameScoreCoroutine != null)
         {
-            StartCoroutine(ShowScoreTextForTimeInterval());
+            float startingAlpha = 0f;
+            if (fadeGameScoreCoroutine != null)
+            {
+                StopCoroutine(fadeGameScoreCoroutine);
+                startingAlpha = gameScoreText.GetComponent<TextMeshProUGUI>().alpha;
+            }
+            fadeGameScoreCoroutine = StartCoroutine(ShowScoreTextForTimeInterval(startingAlpha));
         }
     }
 
-    private IEnumerator ShowScoreTextForTimeInterval()
-    {
+    private IEnumerator ShowScoreTextForTimeInterval(float startingAlpha)
+    {   
         gameScorePanel.SetActive(true);
-        yield return new WaitForSeconds(scoreShowHideInterval);
-        gameScorePanel.SetActive(false);
 
+        TextMeshProUGUI gameScoreUGUI = gameScoreText.GetComponent<TextMeshProUGUI>();
+        gameScoreUGUI.CrossFadeAlpha(startingAlpha, 0f, false);
+        gameScoreUGUI.CrossFadeAlpha(1f, scoreShowHideInterval/2, false);
+        yield return new WaitForSeconds(scoreShowHideInterval);
+
+        gameScoreUGUI.CrossFadeAlpha(0f, scoreShowHideInterval/2, false);
+        yield return new WaitForSeconds(scoreShowHideInterval);
+        
+        gameScorePanel.SetActive(false);
+        gameScoreUGUI.CrossFadeAlpha(1f, 0f, false);
+        fadeGameScoreCoroutine = null;
     }
 
     public bool UseBloodForShooting(int amount) {
