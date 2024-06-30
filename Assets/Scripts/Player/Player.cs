@@ -1,11 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
+using static Cinemachine.CinemachineTriggerAction.ActionSettings;
 
 public class Player : MonoBehaviour {
     [Header("Player")]
-    [SerializeField] private int bloodTank;
     [SerializeField] private int moveSpeed = 7;
+
+    [Header("Blood Tank")]
+    [SerializeField] private float currentBloodTank = 30f;
+    [SerializeField] private float maxBloodTank = 30f;
+    [SerializeField] private Image bloodTankImage = null;
 
     [Header("Health")]
     [SerializeField] private int maxHealth;
@@ -19,7 +27,8 @@ public class Player : MonoBehaviour {
     [Header("Shooting")]
     [SerializeField] private GameObject playerProjectilePrefab;
     [SerializeField] private Transform shootPosition;
-    [SerializeField] private int ammoCost;
+    [SerializeField] private int ammoCost = 5;
+    [SerializeField] public float shootingInterval = 0.1f;
 
     [Header("Melee Attack")]
     [SerializeField] private float meleeRange = 1f;
@@ -45,6 +54,8 @@ public class Player : MonoBehaviour {
     private float horizontalDirection = 0;
     private float verticalDirection = 0;
 
+    private bool canShoot = true;
+
     private void Awake()
     {
         myAnimator = GetComponent<Animator>();
@@ -54,6 +65,9 @@ public class Player : MonoBehaviour {
 
     void Start() {
         currentHealth = maxHealth;
+
+        currentBloodTank = maxBloodTank;
+        UpdateBloodTankUI(currentBloodTank);
     }
 
     private void Update() {
@@ -104,12 +118,47 @@ public class Player : MonoBehaviour {
 
     private void UpdateMovementStates(Vector2 inputVector) {
         isMoving = inputVector != Vector2.zero;
-        isMovingHorizontally = inputVector.y == 0;
-        isMovingUp = inputVector.y > 0;
+        isMovingHorizontally = Mathf.Abs(inputVector.y) < Mathf.Abs(inputVector.x);
+        isMovingUp = (Mathf.Abs(inputVector.y) > Mathf.Abs(inputVector.x)) && inputVector.y > 0;
     }
 
     private bool ShouldFlipCharacter() {
         return isMovingHorizontally && ShouldFlip();
+    }
+
+    private void UpdateBloodTankUI(float currentAmount)
+    {
+        bloodTankImage.fillAmount = currentAmount / maxBloodTank;
+    }
+
+    private IEnumerator UpdateBloodTankOverTime(float amount, string method)
+    {
+
+        float elapsedTime = 0f;
+        float targetBloodTank = currentBloodTank;
+        float previousBloodTank;
+        if (method == "decrease")
+        {
+            previousBloodTank = Mathf.Max(0f, targetBloodTank + amount);
+        } else
+        {
+            previousBloodTank = Mathf.Min(30f, targetBloodTank - amount);
+        }
+        float duration = 1f;
+
+        Debug.Log("Duration: " + duration);
+
+        while (elapsedTime < duration)
+        {
+            previousBloodTank = Mathf.Lerp(previousBloodTank, targetBloodTank, elapsedTime / duration);
+            
+            UpdateBloodTankUI(previousBloodTank);
+
+            yield return null;
+            elapsedTime += Time.deltaTime;
+        }
+
+        //previousBloodTank = targetBloodTank;
     }
 
     private void HandleHealing() {
@@ -119,19 +168,39 @@ public class Player : MonoBehaviour {
     }
 
     private void HandleAttacks() {
-        if (gameInput.IsShooting()) {
-            ShootOrMelee();
+        if (canShoot)
+        {
+            if (gameInput.IsShooting()) {
+                StartCoroutine(ShootOrMelee("button"));
+            } else if (gameInput.IsShootingJoystick())
+            {
+                StartCoroutine(ShootOrMelee("joystick"));
+            }
         }
+        
     }
 
-    private void ShootOrMelee() {
+    private IEnumerator ShootOrMelee(string method) {
+        canShoot = false;
+
         if (UseBloodForShooting(ammoCost)) {
             myAnimator.SetBool("IsShooting", true);
-            Shoot();
+            if (method == "button")
+            {
+                Shoot();
+            }
+            else
+            {
+                ShootJoystick();    
+            }
         }
         else {
             MeleeAttack();
         }
+
+        yield return new WaitForSeconds(shootingInterval);
+
+        canShoot = true;
     }
 
     private void Shoot() {
@@ -140,6 +209,14 @@ public class Player : MonoBehaviour {
         GameObject projectileInstance = Instantiate(playerProjectilePrefab, transform.position, Quaternion.identity);
         PlayerProjectile projectileScript = projectileInstance.GetComponent<PlayerProjectile>();
         projectileScript.Initialize(direction);
+    }
+
+    private void ShootJoystick()
+    {
+        Vector2 shootDirections = gameInput.GetShootVectorNormalized();
+        GameObject projectileInstance = Instantiate(playerProjectilePrefab, transform.position, Quaternion.identity);
+        PlayerProjectile projectileScript = projectileInstance.GetComponent<PlayerProjectile>();
+        projectileScript.Initialize(shootDirections);
     }
 
     private void MeleeAttack() {
@@ -217,26 +294,29 @@ public class Player : MonoBehaviour {
     }
 
     public bool UseBloodForShooting(int amount) {
-        if (bloodTank >= amount) {
-            bloodTank -= amount;
+        if (currentBloodTank >= amount) {
+            currentBloodTank -= amount;
+            StartCoroutine(UpdateBloodTankOverTime(amount, "decrease"));
             return true;
         }
         return false;
     }
 
     private void TryHeal() {
-        if (bloodTank >= healCost && currentHealth < maxHealth) {
+        if (currentBloodTank >= healCost && currentHealth < maxHealth) {
             currentHealth = maxHealth;
-            bloodTank -= healCost;
+            currentBloodTank -= healCost;
             AddScore(healScore);
             playHealAudioClip();
         }
     }
 
     public void CollectBlood(int amount) {
-        bloodTank += amount;
+        var previousBloodTank = currentBloodTank;
+        currentBloodTank = Mathf.Min(maxBloodTank, currentBloodTank + amount);
         AddScore(bloodPickupScore);
         playBloodPickUpAudioClip();
+        StartCoroutine(UpdateBloodTankOverTime(currentBloodTank-previousBloodTank, "increase"));
     }
 
     public void AddScore(int amount) {

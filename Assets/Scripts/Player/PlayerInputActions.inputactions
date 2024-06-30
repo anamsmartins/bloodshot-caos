@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ShootJoystick",
+                    "type": "Value",
+                    "id": "3b3bf663-ef88-41f3-b46c-cf9eb07a38df",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -91,6 +100,17 @@
                 },
                 {
                     "name": "",
+                    "id": "74b20ec6-d703-40d0-af05-b508ea13e029",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a111d17a-6fce-48b7-8cc0-d2284979f0fa",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
@@ -108,6 +128,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Heal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "04198de1-9d24-4d33-ba77-e8498cb930a1",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShootJoystick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

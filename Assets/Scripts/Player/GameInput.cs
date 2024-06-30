@@ -14,8 +14,19 @@ public class GameInput : MonoBehaviour {
         return inputVector.normalized;
     }
 
+    public Vector2 GetShootVectorNormalized()
+    {
+        Vector2 inputVector = playerInputActions.Player.ShootJoystick.ReadValue<Vector2>();
+        return inputVector.normalized;
+    }
+
     public bool IsShooting() {
         return playerInputActions.Player.Shoot.triggered;
+    }
+
+    public bool IsShootingJoystick()
+    {
+        return playerInputActions.Player.ShootJoystick.IsPressed();
     }
 
     public Vector2 GetMousePosition() {

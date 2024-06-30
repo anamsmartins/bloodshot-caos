@@ -53,6 +53,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ShootJoystick"",
+                    ""type"": ""Value"",
+                    ""id"": ""3b3bf663-ef88-41f3-b46c-cf9eb07a38df"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -113,6 +122,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""74b20ec6-d703-40d0-af05-b508ea13e029"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""a111d17a-6fce-48b7-8cc0-d2284979f0fa"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
@@ -132,6 +152,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Heal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""04198de1-9d24-4d33-ba77-e8498cb930a1"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ShootJoystick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -143,6 +174,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Shoot = m_Player.FindAction("Shoot", throwIfNotFound: true);
         m_Player_Heal = m_Player.FindAction("Heal", throwIfNotFound: true);
+        m_Player_ShootJoystick = m_Player.FindAction("ShootJoystick", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -207,6 +239,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Shoot;
     private readonly InputAction m_Player_Heal;
+    private readonly InputAction m_Player_ShootJoystick;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -214,6 +247,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Shoot => m_Wrapper.m_Player_Shoot;
         public InputAction @Heal => m_Wrapper.m_Player_Heal;
+        public InputAction @ShootJoystick => m_Wrapper.m_Player_ShootJoystick;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -232,6 +266,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Heal.started += instance.OnHeal;
             @Heal.performed += instance.OnHeal;
             @Heal.canceled += instance.OnHeal;
+            @ShootJoystick.started += instance.OnShootJoystick;
+            @ShootJoystick.performed += instance.OnShootJoystick;
+            @ShootJoystick.canceled += instance.OnShootJoystick;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -245,6 +282,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Heal.started -= instance.OnHeal;
             @Heal.performed -= instance.OnHeal;
             @Heal.canceled -= instance.OnHeal;
+            @ShootJoystick.started -= instance.OnShootJoystick;
+            @ShootJoystick.performed -= instance.OnShootJoystick;
+            @ShootJoystick.canceled -= instance.OnShootJoystick;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -267,5 +307,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnHeal(InputAction.CallbackContext context);
+        void OnShootJoystick(InputAction.CallbackContext context);
     }
 }
