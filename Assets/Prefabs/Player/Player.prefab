@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 6920335679326503813}
   - component: {fileID: 993984980519418304}
   - component: {fileID: -9053205599038725476}
+  - component: {fileID: 1541279967442777184}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -313,7 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7731133ae4058694587b5e9642072863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 9
+  moveSpeed: 6
   currentBloodTank: 30
   maxBloodTank: 30
   bloodTankImage: {fileID: 0}
@@ -328,7 +329,7 @@ MonoBehaviour:
   playerProjectilePrefab: {fileID: 4059073418233113821, guid: 8caf53fa43db06442b1686addbf36bff, type: 3}
   shootPosition: {fileID: 5837875126759364525}
   ammoCost: 2
-  shootingInterval: 0.3
+  shootingInterval: 0.4
   meleeRange: 1.2
   meleeDamage: 1
   gameInput: {fileID: 0}
@@ -439,3 +440,33 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1541279967442777184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8968617094084991692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: ea08591b7f7ec664582d63341e214390, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
