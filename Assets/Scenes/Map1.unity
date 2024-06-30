@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &735486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+  m_PrefabInstance: {fileID: 1895540269}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1627192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -189,6 +193,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7966127035626673593, guid: f0cd6fb016929d245a6b0576f0408566, type: 3}
   m_PrefabInstance: {fileID: 2857922278652142703}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &20162486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+  m_PrefabInstance: {fileID: 1823726224}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &31689758
 PrefabInstance:
@@ -311,6 +320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TopLeftCornerWall
       objectReference: {fileID: 0}
+    - target: {fileID: 436945522151168500, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     - target: {fileID: 2446761672039775322, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.121358
@@ -354,7 +367,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 436945522151168500, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1266304239}
   m_SourcePrefab: {fileID: 100100000, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
 --- !u!4 &38220432 stripped
 Transform:
@@ -537,6 +553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShortWall2
       objectReference: {fileID: 0}
+    - target: {fileID: 8861359933066061902, guid: 1a1c14637a472ce4cb099b532af4089f, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -544,6 +564,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8861359933066061902, guid: 1a1c14637a472ce4cb099b532af4089f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 833148511}
+    - targetCorrespondingSourceObject: {fileID: 8861359933066061902, guid: 1a1c14637a472ce4cb099b532af4089f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 833148513}
   m_SourcePrefab: {fileID: 100100000, guid: 1a1c14637a472ce4cb099b532af4089f, type: 3}
 --- !u!4 &60018810 stripped
 Transform:
@@ -635,6 +658,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: 9fb66d8c9d3b5194a82e9eed65a54afb, type: 3}
       propertyPath: m_Name
       value: PF Props Bush T5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 9fb66d8c9d3b5194a82e9eed65a54afb, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 9fb66d8c9d3b5194a82e9eed65a54afb, type: 3}
       propertyPath: m_LocalScale.x
@@ -807,10 +834,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1635208677}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &71488051 stripped
 Transform:
@@ -926,15 +960,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 624467150}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &73434349 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6439640306188552767, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
   m_PrefabInstance: {fileID: 73434348}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &89364484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3657026511009740758, guid: d9cb7ec5911df1f4e98be62fccefe395, type: 3}
+  m_PrefabInstance: {fileID: 445941544}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &96368981
 PrefabInstance:
@@ -955,6 +1001,10 @@ PrefabInstance:
     - target: {fileID: 5055698509961064897, guid: 6d6991dbbdeecb1488bbf78c063d1235, type: 3}
       propertyPath: m_Name
       value: RunePillar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5055698509961064897, guid: 6d6991dbbdeecb1488bbf78c063d1235, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 5055698509961064898, guid: 6d6991dbbdeecb1488bbf78c063d1235, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1019,7 +1069,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5055698509961064897, guid: 6d6991dbbdeecb1488bbf78c063d1235, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 473184422}
   m_SourcePrefab: {fileID: 100100000, guid: 6d6991dbbdeecb1488bbf78c063d1235, type: 3}
 --- !u!4 &96368982 stripped
 Transform:
@@ -1385,10 +1438,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShortWall2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8861359933066061902, guid: 1a1c14637a472ce4cb099b532af4089f, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8861359933066061902, guid: 1a1c14637a472ce4cb099b532af4089f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1908381138}
   m_SourcePrefab: {fileID: 100100000, guid: 1a1c14637a472ce4cb099b532af4089f, type: 3}
 --- !u!4 &111182751 stripped
 Transform:
@@ -1447,10 +1507,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 913972428}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &117981422 stripped
 Transform:
@@ -1716,6 +1783,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Bush T1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1592
@@ -1830,15 +1901,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 241961179}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &145991243 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6439640306188552767, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
   m_PrefabInstance: {fileID: 145991242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &154543093 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+  m_PrefabInstance: {fileID: 799606697}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &160756820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+  m_PrefabInstance: {fileID: 428466346}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &161026847
 PrefabInstance:
@@ -1851,6 +1939,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: 0505844a909d2ea4996c19b67b2a40b9, type: 3}
       propertyPath: m_Name
       value: PF Props Bush T3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 0505844a909d2ea4996c19b67b2a40b9, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 0505844a909d2ea4996c19b67b2a40b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -2028,6 +2120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LongWall (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5393793503342774908, guid: c11374ce305e5a14fb710202cc22e000, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2089,6 +2185,10 @@ PrefabInstance:
     - target: {fileID: 7947911505737750455, guid: 6d69371a87148ee4dac7b2b814437ffd, type: 3}
       propertyPath: m_Name
       value: PF Props Stone T1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 6d69371a87148ee4dac7b2b814437ffd, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2405,6 +2505,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8175971909813344115, guid: 3c4567a2a810101499305840ddc06201, type: 3}
   m_PrefabInstance: {fileID: 212389968}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &241961177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 145991242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &241961179
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241961177}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &242314428
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,6 +2721,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: 39562e88b536753438a3153c5fbdf7b8, type: 3}
       propertyPath: m_Name
       value: PF Props Bush T6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 39562e88b536753438a3153c5fbdf7b8, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 39562e88b536753438a3153c5fbdf7b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2933,10 +3069,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: TopRightCornerWall
       objectReference: {fileID: 0}
+    - target: {fileID: 3657026511009740758, guid: d9cb7ec5911df1f4e98be62fccefe395, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3657026511009740758, guid: d9cb7ec5911df1f4e98be62fccefe395, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 455387291}
   m_SourcePrefab: {fileID: 100100000, guid: d9cb7ec5911df1f4e98be62fccefe395, type: 3}
 --- !u!4 &291268483 stripped
 Transform:
@@ -3004,6 +3147,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8175971909813344115, guid: 3c4567a2a810101499305840ddc06201, type: 3}
   m_PrefabInstance: {fileID: 300224625}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &302484622 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+  m_PrefabInstance: {fileID: 1072615165}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &306708100
 PrefabInstance:
@@ -3243,10 +3391,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1551803811}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &325772342 stripped
 Transform:
@@ -3429,10 +3584,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 437692238}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &355157622 stripped
 Transform:
@@ -3491,10 +3653,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 588890069}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &363168714 stripped
 Transform:
@@ -3615,15 +3784,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1846049375}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &367141494 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6439640306188552767, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
   m_PrefabInstance: {fileID: 367141493}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &369305129 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7947911505737750455, guid: d730038d263986f4dac93230e1dd62b0, type: 3}
+  m_PrefabInstance: {fileID: 616004493}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &370031253
 PrefabInstance:
@@ -3677,15 +3858,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1834593260}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &370031254 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6439640306188552767, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
   m_PrefabInstance: {fileID: 370031253}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &375957818 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+  m_PrefabInstance: {fileID: 648123432}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &391148613
 PrefabInstance:
@@ -3947,6 +4140,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Bush T1
       objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.7637024
@@ -4044,10 +4241,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: CornerWallRight
       objectReference: {fileID: 0}
+    - target: {fileID: 8603580730084542343, guid: c5234bad7b58657408c78ee7e2c50d26, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8603580730084542343, guid: c5234bad7b58657408c78ee7e2c50d26, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 652770763}
   m_SourcePrefab: {fileID: 100100000, guid: c5234bad7b58657408c78ee7e2c50d26, type: 3}
 --- !u!4 &394258579 stripped
 Transform:
@@ -4487,16 +4691,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalRightWall
       objectReference: {fileID: 0}
+    - target: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 428466349}
   m_SourcePrefab: {fileID: 100100000, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
 --- !u!4 &428466347 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1418261702392211270, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
   m_PrefabInstance: {fileID: 428466346}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &428466349
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160756820}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &436286039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4516,6 +4754,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
       propertyPath: m_Name
       value: PF Props Bush T1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
       propertyPath: m_LocalScale.x
@@ -4663,6 +4905,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 132441492}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &437692236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 355157621}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &437692238
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437692236}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &439450706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4715,10 +4989,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalRightWall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2070173161}
   m_SourcePrefab: {fileID: 100100000, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
 --- !u!4 &439450707 stripped
 Transform:
@@ -4736,6 +5017,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: 39562e88b536753438a3153c5fbdf7b8, type: 3}
       propertyPath: m_Name
       value: PF Props Bush T6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 39562e88b536753438a3153c5fbdf7b8, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 39562e88b536753438a3153c5fbdf7b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4834,16 +5119,87 @@ PrefabInstance:
       propertyPath: m_Name
       value: TopRightCornerWall
       objectReference: {fileID: 0}
+    - target: {fileID: 3657026511009740758, guid: d9cb7ec5911df1f4e98be62fccefe395, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3657026511009740758, guid: d9cb7ec5911df1f4e98be62fccefe395, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 445941549}
   m_SourcePrefab: {fileID: 100100000, guid: d9cb7ec5911df1f4e98be62fccefe395, type: 3}
 --- !u!4 &445941545 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 355525985790726929, guid: d9cb7ec5911df1f4e98be62fccefe395, type: 3}
   m_PrefabInstance: {fileID: 445941544}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &445941549
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89364484}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!1 &446062394 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 1051136087}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &455387287 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3657026511009740758, guid: d9cb7ec5911df1f4e98be62fccefe395, type: 3}
+  m_PrefabInstance: {fileID: 291268482}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &455387291
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455387287}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &459612199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4905,6 +5261,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8175971909813344115, guid: 3c4567a2a810101499305840ddc06201, type: 3}
   m_PrefabInstance: {fileID: 459612199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &466982990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 1503289220}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &468477991
 PrefabInstance:
@@ -5030,6 +5391,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8175971909813344115, guid: 3c4567a2a810101499305840ddc06201, type: 3}
   m_PrefabInstance: {fileID: 469403255}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &473184419 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5055698509961064897, guid: 6d6991dbbdeecb1488bbf78c063d1235, type: 3}
+  m_PrefabInstance: {fileID: 96368981}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &473184422
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473184419}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &476483077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5038,6 +5431,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6075975974933568967, guid: 295e819650a63784185fc3d55ce9e650, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     - target: {fileID: 6075975974975622417, guid: 295e819650a63784185fc3d55ce9e650, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.00029420853
@@ -5081,6 +5478,10 @@ PrefabInstance:
     - target: {fileID: 6075975974975622418, guid: 295e819650a63784185fc3d55ce9e650, type: 3}
       propertyPath: m_Name
       value: SecondStairs
+      objectReference: {fileID: 0}
+    - target: {fileID: 6075975975660753996, guid: 295e819650a63784185fc3d55ce9e650, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5160,6 +5561,10 @@ PrefabInstance:
     - target: {fileID: 4331307297609962461, guid: fd980c817c63af4458df40a61e529e93, type: 3}
       propertyPath: m_Name
       value: PF Grass D
+      objectReference: {fileID: 0}
+    - target: {fileID: 4331307297609962461, guid: fd980c817c63af4458df40a61e529e93, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 9132832536761082797, guid: fd980c817c63af4458df40a61e529e93, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5325,10 +5730,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: TopRightCornerWall
       objectReference: {fileID: 0}
+    - target: {fileID: 3657026511009740758, guid: d9cb7ec5911df1f4e98be62fccefe395, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3657026511009740758, guid: d9cb7ec5911df1f4e98be62fccefe395, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1086019502}
   m_SourcePrefab: {fileID: 100100000, guid: d9cb7ec5911df1f4e98be62fccefe395, type: 3}
 --- !u!4 &494826799 stripped
 Transform:
@@ -5531,6 +5943,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8175971909813344115, guid: 3c4567a2a810101499305840ddc06201, type: 3}
   m_PrefabInstance: {fileID: 577505469}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &588890067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 363168713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &588890069
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588890067}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &596545878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5583,10 +6027,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1474697464}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &596545879 stripped
 Transform:
@@ -5672,6 +6123,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CornerWallLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 4206644794093623562, guid: 984321f84bb099440a5bff2fcc23b2b2, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     - target: {fileID: 8875025802310966352, guid: 984321f84bb099440a5bff2fcc23b2b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.588642
@@ -5715,7 +6170,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4206644794093623562, guid: 984321f84bb099440a5bff2fcc23b2b2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2118070670}
   m_SourcePrefab: {fileID: 100100000, guid: 984321f84bb099440a5bff2fcc23b2b2, type: 3}
 --- !u!1001 &611494655
 PrefabInstance:
@@ -5948,16 +6406,82 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Statue
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: d730038d263986f4dac93230e1dd62b0, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: d730038d263986f4dac93230e1dd62b0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 616004497}
   m_SourcePrefab: {fileID: 100100000, guid: d730038d263986f4dac93230e1dd62b0, type: 3}
 --- !u!4 &616004494 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7947911505737750448, guid: d730038d263986f4dac93230e1dd62b0, type: 3}
   m_PrefabInstance: {fileID: 616004493}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &616004497
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369305129}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!1 &624467148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 73434348}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &624467150
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624467148}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &626464207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6009,6 +6533,10 @@ PrefabInstance:
     - target: {fileID: 5393793503342774908, guid: c11374ce305e5a14fb710202cc22e000, type: 3}
       propertyPath: m_Name
       value: LongWall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393793503342774908, guid: c11374ce305e5a14fb710202cc22e000, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6075,6 +6603,10 @@ PrefabInstance:
     - target: {fileID: 4064746625110277272, guid: 1dc4948f20ddc324f84c815af63aa6a9, type: 3}
       propertyPath: m_Name
       value: PF Grass L
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064746625110277272, guid: 1dc4948f20ddc324f84c815af63aa6a9, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 8848819282490232040, guid: 1dc4948f20ddc324f84c815af63aa6a9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6195,6 +6727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalLeftWall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     - target: {fileID: 5964609822029538151, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.998646
@@ -6238,13 +6774,75 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 648123435}
   m_SourcePrefab: {fileID: 100100000, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
 --- !u!4 &648123433 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5964609822029538151, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
   m_PrefabInstance: {fileID: 648123432}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &648123435
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375957818}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!1 &652770761 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8603580730084542343, guid: c5234bad7b58657408c78ee7e2c50d26, type: 3}
+  m_PrefabInstance: {fileID: 394258578}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &652770763
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652770761}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &673054996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6435,6 +7033,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Grass E
       objectReference: {fileID: 0}
+    - target: {fileID: 5830985496270386004, guid: 019ab1af1d7a4b742a982c009534c058, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6456,6 +7058,10 @@ PrefabInstance:
     - target: {fileID: 436945522151168500, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
       propertyPath: m_Name
       value: TopLeftCornerWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 436945522151168500, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2446761672039775322, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6500,7 +7106,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 436945522151168500, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1347139136}
   m_SourcePrefab: {fileID: 100100000, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
 --- !u!4 &677137081 stripped
 Transform:
@@ -6621,10 +7230,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalRightWall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1644771341}
   m_SourcePrefab: {fileID: 100100000, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
 --- !u!4 &679520992 stripped
 Transform:
@@ -6650,6 +7266,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: 9fb66d8c9d3b5194a82e9eed65a54afb, type: 3}
       propertyPath: m_Name
       value: PF Props Bush T5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 9fb66d8c9d3b5194a82e9eed65a54afb, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 9fb66d8c9d3b5194a82e9eed65a54afb, type: 3}
       propertyPath: m_LocalScale.x
@@ -6837,6 +7457,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8529525370913589197, guid: d1a4388d1db7d754880c9cac78db7815, type: 3}
   m_PrefabInstance: {fileID: 697226206}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &725429025 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8603580730084542343, guid: c5234bad7b58657408c78ee7e2c50d26, type: 3}
+  m_PrefabInstance: {fileID: 1473420427}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &739823731 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 806757241491430403, guid: a26561c477325164d938826806e37bc4, type: 3}
@@ -6853,6 +7478,10 @@ PrefabInstance:
     - target: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
       propertyPath: m_Name
       value: VerticalLeftWall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 5964609822029538151, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6897,7 +7526,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1163672991}
   m_SourcePrefab: {fileID: 100100000, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
 --- !u!4 &740120474 stripped
 Transform:
@@ -7080,10 +7712,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1862427470}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &749282515 stripped
 Transform:
@@ -7171,6 +7810,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
       propertyPath: m_Name
       value: PF Props Bush T1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7293,6 +7936,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 806757241491430403, guid: a26561c477325164d938826806e37bc4, type: 3}
   m_PrefabInstance: {fileID: 255134765}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &783552525 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 2012116327}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &789737861
 GameObject:
@@ -7541,6 +8189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalLeftWall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     - target: {fileID: 5964609822029538151, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.998646
@@ -7584,13 +8236,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 799606700}
   m_SourcePrefab: {fileID: 100100000, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
 --- !u!4 &799606698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5964609822029538151, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
   m_PrefabInstance: {fileID: 799606697}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &799606700
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154543093}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &802830281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7643,6 +8325,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Stone Bench W
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8eb546cfc24c8c24196899cee5797135, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7652,6 +8338,16 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7947911505737750448, guid: 8eb546cfc24c8c24196899cee5797135, type: 3}
   m_PrefabInstance: {fileID: 802830281}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &803341145 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 436945522151168500, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
+  m_PrefabInstance: {fileID: 1084127482}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &803945495 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8603580730084542343, guid: c5234bad7b58657408c78ee7e2c50d26, type: 3}
+  m_PrefabInstance: {fileID: 973213181}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &814462144
 PrefabInstance:
@@ -7767,6 +8463,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Stone T6
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: d5762f992ea3bd544bb8287f66e8f844, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7788,6 +8488,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
       propertyPath: m_Name
       value: PF Props Bush T1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7850,6 +8554,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
       propertyPath: m_Name
       value: PF Props Bush T1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8008,6 +8716,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2738428, y: 1.4722972}
   m_EdgeRadius: 0
+--- !u!50 &833148513
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833148509}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &836784772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8166,6 +8901,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Bush T3
       objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 0505844a909d2ea4996c19b67b2a40b9, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 0505844a909d2ea4996c19b67b2a40b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4079404
@@ -8239,6 +8978,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: 4bd7b41600416b54395bf9936a05dc8e, type: 3}
       propertyPath: m_Name
       value: PF Props Bush T4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 4bd7b41600416b54395bf9936a05dc8e, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 4bd7b41600416b54395bf9936a05dc8e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8336,6 +9079,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: 5b94bf9107369684a8153921f763da38, type: 3}
       propertyPath: m_Name
       value: PF Props Bush T2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 5b94bf9107369684a8153921f763da38, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 5b94bf9107369684a8153921f763da38, type: 3}
       propertyPath: m_LocalScale.x
@@ -8585,6 +9332,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 806757241491430403, guid: a26561c477325164d938826806e37bc4, type: 3}
   m_PrefabInstance: {fileID: 909867635}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &913972426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 117981421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &913972428
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913972426}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &915918017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8932,7 +9711,7 @@ MonoBehaviour:
   playerProjectilePrefab: {fileID: 4059073418233113821, guid: 8caf53fa43db06442b1686addbf36bff, type: 3}
   shootPosition: {fileID: 1085444177}
   ammoCost: 5
-  shootingInterval: 1
+  shootingInterval: 0.1
   meleeRange: 1.2
   meleeDamage: 10
   gameInput: {fileID: 1961496093}
@@ -9184,6 +9963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Flower
       objectReference: {fileID: 0}
+    - target: {fileID: 8193410510875309158, guid: c6d86ec8825b7674a9736d1cb0cd98a2, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9365,16 +10148,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: CornerWallRight
       objectReference: {fileID: 0}
+    - target: {fileID: 8603580730084542343, guid: c5234bad7b58657408c78ee7e2c50d26, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8603580730084542343, guid: c5234bad7b58657408c78ee7e2c50d26, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 973213184}
   m_SourcePrefab: {fileID: 100100000, guid: c5234bad7b58657408c78ee7e2c50d26, type: 3}
 --- !u!4 &973213182 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3068222854693212933, guid: c5234bad7b58657408c78ee7e2c50d26, type: 3}
   m_PrefabInstance: {fileID: 973213181}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &973213184
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803945495}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &977792495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9436,6 +10253,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8175971909813344115, guid: 3c4567a2a810101499305840ddc06201, type: 3}
   m_PrefabInstance: {fileID: 977792495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &980589313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 1393687847}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &982368288
 PrefabInstance:
@@ -9510,6 +10332,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: 39562e88b536753438a3153c5fbdf7b8, type: 3}
       propertyPath: m_Name
       value: PF Props Bush T6 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 39562e88b536753438a3153c5fbdf7b8, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 39562e88b536753438a3153c5fbdf7b8, type: 3}
       propertyPath: m_LocalScale.x
@@ -9635,6 +10461,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8175971909813344115, guid: 3c4567a2a810101499305840ddc06201, type: 3}
   m_PrefabInstance: {fileID: 983183804}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &985688215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+  m_PrefabInstance: {fileID: 1534307206}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &987048912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9646,6 +10477,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
       propertyPath: m_Name
       value: PF Props Bush T1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
       propertyPath: m_LocalScale.x
@@ -9886,6 +10721,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LongWall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5393793503342774908, guid: c11374ce305e5a14fb710202cc22e000, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9907,6 +10746,10 @@ PrefabInstance:
     - target: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
       propertyPath: m_Name
       value: VerticalLeftWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 5964609822029538151, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9951,12 +10794,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1978016627}
   m_SourcePrefab: {fileID: 100100000, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
 --- !u!4 &1015052273 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5964609822029538151, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
   m_PrefabInstance: {fileID: 1015052272}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1015226356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+  m_PrefabInstance: {fileID: 1997975983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1028080640 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 1739633397}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1031704972 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8861359933066061902, guid: 1a1c14637a472ce4cb099b532af4089f, type: 3}
+  m_PrefabInstance: {fileID: 1289949304}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1040967498
 PrefabInstance:
@@ -10072,10 +10933,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2068713139}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &1043373553 stripped
 Transform:
@@ -10196,6 +11064,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LongWall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5393793503342774908, guid: c11374ce305e5a14fb710202cc22e000, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10258,16 +11130,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1051136090}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &1051136088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6439640306188552767, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
   m_PrefabInstance: {fileID: 1051136087}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1051136090
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446062394}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1054162751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10568,16 +11474,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalRightWall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1072615168}
   m_SourcePrefab: {fileID: 100100000, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
 --- !u!4 &1072615166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1418261702392211270, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
   m_PrefabInstance: {fileID: 1072615165}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1072615168
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302484622}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1084127482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10589,6 +11529,10 @@ PrefabInstance:
     - target: {fileID: 436945522151168500, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
       propertyPath: m_Name
       value: TopLeftCornerWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 436945522151168500, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2446761672039775322, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10633,13 +11577,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 436945522151168500, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1084127487}
   m_SourcePrefab: {fileID: 100100000, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
 --- !u!4 &1084127483 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2446761672039775322, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
   m_PrefabInstance: {fileID: 1084127482}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1084127487
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803341145}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1085086572
 GameObject:
   m_ObjectHideFlags: 0
@@ -10817,6 +11791,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8175971909813344115, guid: 3c4567a2a810101499305840ddc06201, type: 3}
   m_PrefabInstance: {fileID: 1085750235}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1086019498 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3657026511009740758, guid: d9cb7ec5911df1f4e98be62fccefe395, type: 3}
+  m_PrefabInstance: {fileID: 494826798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1086019502
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086019498}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1093484990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11009,6 +12015,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: 9e7797bb065982d4497d030f065d6e2f, type: 3}
       propertyPath: m_Name
       value: PF Props Tree T3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 9e7797bb065982d4497d030f065d6e2f, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 9e7797bb065982d4497d030f065d6e2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11231,6 +12241,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Brick T1
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: ebdc6ef285e0bf542bed7e9c1bfb9923, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11246,6 +12260,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4491723761108810723, guid: b0084ac6245660e4294fea395855c8d7, type: 3}
   m_PrefabInstance: {fileID: 1818754878}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1163672989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+  m_PrefabInstance: {fileID: 740120473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1163672991
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163672989}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1166854470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11345,7 +12391,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.3660378, g: 0.26727664, b: 0.2927065, a: 0}
+  m_BackGroundColor: {r: 0.3647059, g: 0.26666668, b: 0.29411766, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -11491,6 +12537,10 @@ PrefabInstance:
     - target: {fileID: 9021710266125520640, guid: 4800845c2c4caa84eb6194552ae9c841, type: 3}
       propertyPath: m_Name
       value: PF Grass K
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021710266125520640, guid: 4800845c2c4caa84eb6194552ae9c841, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11817,10 +12867,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1271100632}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &1252126589 stripped
 Transform:
@@ -11911,6 +12968,102 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1266304235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 436945522151168500, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
+  m_PrefabInstance: {fileID: 38220431}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1266304239
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266304235}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!1 &1269716629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4206644794093623562, guid: 984321f84bb099440a5bff2fcc23b2b2, type: 3}
+  m_PrefabInstance: {fileID: 1591164240}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1269716631
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269716629}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!1 &1271100630 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 1252126588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1271100632
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271100630}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1278922777
 GameObject:
   m_ObjectHideFlags: 0
@@ -12033,16 +13186,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShortWall2
       objectReference: {fileID: 0}
+    - target: {fileID: 8861359933066061902, guid: 1a1c14637a472ce4cb099b532af4089f, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8861359933066061902, guid: 1a1c14637a472ce4cb099b532af4089f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1289949307}
   m_SourcePrefab: {fileID: 100100000, guid: 1a1c14637a472ce4cb099b532af4089f, type: 3}
 --- !u!4 &1289949305 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1898191887317468664, guid: 1a1c14637a472ce4cb099b532af4089f, type: 3}
   m_PrefabInstance: {fileID: 1289949304}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1289949307
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031704972}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1300118309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12094,6 +13281,10 @@ PrefabInstance:
     - target: {fileID: 7947911505737750455, guid: 92a9322ee3bba184f91fbebe53b69bd9, type: 3}
       propertyPath: m_Name
       value: PF Props Brick T3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 92a9322ee3bba184f91fbebe53b69bd9, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12344,6 +13535,11 @@ Transform:
   - {fileID: 394258579}
   m_Father: {fileID: 1498472105}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1328267374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 1995608981}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1345510111 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2055102311959635375, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
@@ -12401,10 +13597,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1482283852}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &1346609996 stripped
 Transform:
@@ -12473,6 +13676,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8175971909813344115, guid: 3c4567a2a810101499305840ddc06201, type: 3}
   m_PrefabInstance: {fileID: 1346831410}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1347139132 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 436945522151168500, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
+  m_PrefabInstance: {fileID: 677137080}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1347139136
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347139132}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1349322588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12613,6 +13848,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TopLeftCornerWall
       objectReference: {fileID: 0}
+    - target: {fileID: 436945522151168500, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     - target: {fileID: 2446761672039775322, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.628643
@@ -12656,7 +13895,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 436945522151168500, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1663434475}
   m_SourcePrefab: {fileID: 100100000, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
 --- !u!4 &1356418113 stripped
 Transform:
@@ -12914,16 +14156,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1393687850}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &1393687848 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6439640306188552767, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
   m_PrefabInstance: {fileID: 1393687847}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1393687850
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980589313}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1396573077
 GameObject:
   m_ObjectHideFlags: 0
@@ -13365,6 +14641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Tree T2
       objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 7277dd75e907b27448ec1de08238d0bb, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 7277dd75e907b27448ec1de08238d0bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.8534684
@@ -13539,6 +14819,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6560635683091153172, guid: dae8e3fd20837c0408eb512b307ddd55, type: 3}
   m_PrefabInstance: {fileID: 1449602797}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1450257128 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+  m_PrefabInstance: {fileID: 2057631340}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1454243845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13590,6 +14875,10 @@ PrefabInstance:
     - target: {fileID: 7947911505737750455, guid: 8728cc48d2747494893fd60426c06f6e, type: 3}
       propertyPath: m_Name
       value: PF Props Rune Pillar Broken
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8728cc48d2747494893fd60426c06f6e, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13715,11 +15004,82 @@ PrefabInstance:
       propertyPath: m_Name
       value: CornerWallRight
       objectReference: {fileID: 0}
+    - target: {fileID: 8603580730084542343, guid: c5234bad7b58657408c78ee7e2c50d26, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8603580730084542343, guid: c5234bad7b58657408c78ee7e2c50d26, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1714951735}
   m_SourcePrefab: {fileID: 100100000, guid: c5234bad7b58657408c78ee7e2c50d26, type: 3}
+--- !u!1 &1474697462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 596545878}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1474697464
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474697462}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!1 &1482283850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 1346609995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1482283852
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482283850}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1482768357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13967,6 +15327,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Stone T7
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: f826bf48ad5bedc4ab6cabe6c4e498e8, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14029,16 +15393,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1503289223}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &1503289221 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6439640306188552767, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
   m_PrefabInstance: {fileID: 1503289220}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1503289223
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466982990}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1503953642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14062,6 +15460,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: 5b94bf9107369684a8153921f763da38, type: 3}
       propertyPath: m_Name
       value: PF Props Bush T2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 5b94bf9107369684a8153921f763da38, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 5b94bf9107369684a8153921f763da38, type: 3}
       propertyPath: m_LocalScale.x
@@ -14329,6 +15731,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalLeftWall
       objectReference: {fileID: 0}
+    - target: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     - target: {fileID: 5964609822029538151, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.998646
@@ -14372,13 +15778,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1534307209}
   m_SourcePrefab: {fileID: 100100000, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
 --- !u!4 &1534307207 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5964609822029538151, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
   m_PrefabInstance: {fileID: 1534307206}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1534307209
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985688215}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1537172238
 GameObject:
   m_ObjectHideFlags: 0
@@ -14515,6 +15951,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LongWall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5393793503342774908, guid: c11374ce305e5a14fb710202cc22e000, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14525,6 +15965,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2424703688053620372, guid: c11374ce305e5a14fb710202cc22e000, type: 3}
   m_PrefabInstance: {fileID: 1545602440}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1551803809 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 325772341}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1551803811
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551803809}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1554456865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14536,6 +16008,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: 39562e88b536753438a3153c5fbdf7b8, type: 3}
       propertyPath: m_Name
       value: PF Props Bush T6 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 39562e88b536753438a3153c5fbdf7b8, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 39562e88b536753438a3153c5fbdf7b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14639,6 +16115,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LongWall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5393793503342774908, guid: c11374ce305e5a14fb710202cc22e000, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14728,6 +16208,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CornerWallLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 4206644794093623562, guid: 984321f84bb099440a5bff2fcc23b2b2, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     - target: {fileID: 8875025802310966352, guid: 984321f84bb099440a5bff2fcc23b2b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.1307077
@@ -14771,7 +16255,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4206644794093623562, guid: 984321f84bb099440a5bff2fcc23b2b2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1269716631}
   m_SourcePrefab: {fileID: 100100000, guid: 984321f84bb099440a5bff2fcc23b2b2, type: 3}
 --- !u!4 &1595045666 stripped
 Transform:
@@ -14950,6 +16437,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8175971909813344115, guid: 3c4567a2a810101499305840ddc06201, type: 3}
   m_PrefabInstance: {fileID: 1620403724}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1624288202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4206644794093623562, guid: 984321f84bb099440a5bff2fcc23b2b2, type: 3}
+  m_PrefabInstance: {fileID: 610953564}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1624447275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15020,6 +16512,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8676622616798434471, guid: b7ceeca87b8db644d8b1fe07d8679c7b, type: 3}
   m_PrefabInstance: {fileID: 1624447275}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1625924009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+  m_PrefabInstance: {fileID: 1674228865}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1632299319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15082,6 +16579,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8676622616798434471, guid: b7ceeca87b8db644d8b1fe07d8679c7b, type: 3}
   m_PrefabInstance: {fileID: 1632299319}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1635208675 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 71488050}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1635208677
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635208675}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1641904536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15144,6 +16673,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8175971909813344115, guid: 3c4567a2a810101499305840ddc06201, type: 3}
   m_PrefabInstance: {fileID: 1641904536}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1644771339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+  m_PrefabInstance: {fileID: 679520991}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1644771341
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644771339}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &1648115268 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8579970350385457196, guid: 8f6ec62718b28ca4a81e7b694194eba1, type: 3}
@@ -15211,6 +16772,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8175971909813344115, guid: 3c4567a2a810101499305840ddc06201, type: 3}
   m_PrefabInstance: {fileID: 1654395152}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1663434471 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 436945522151168500, guid: c3f0baf8ddf57bc4dac3bc3cfd136728, type: 3}
+  m_PrefabInstance: {fileID: 1356418112}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1663434475
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663434471}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1673440677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15263,6 +16856,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LongWall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5393793503342774908, guid: c11374ce305e5a14fb710202cc22e000, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15284,6 +16881,10 @@ PrefabInstance:
     - target: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
       propertyPath: m_Name
       value: VerticalLeftWall (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 5964609822029538151, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15328,13 +16929,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1674228868}
   m_SourcePrefab: {fileID: 100100000, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
 --- !u!4 &1674228866 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5964609822029538151, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
   m_PrefabInstance: {fileID: 1674228865}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1674228868
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625924009}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &1675638436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2055102311959635375, guid: 39562e88b536753438a3153c5fbdf7b8, type: 3}
@@ -15420,6 +17051,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3068222854693212933, guid: c5234bad7b58657408c78ee7e2c50d26, type: 3}
   m_PrefabInstance: {fileID: 1473420427}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1714951735
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725429025}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1716196714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15661,6 +17319,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Bush T2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 5b94bf9107369684a8153921f763da38, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 5b94bf9107369684a8153921f763da38, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.1546
@@ -15775,16 +17437,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1739633400}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &1739633398 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6439640306188552767, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
   m_PrefabInstance: {fileID: 1739633397}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1739633400
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028080640}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1740604107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15992,6 +17688,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: 4bd7b41600416b54395bf9936a05dc8e, type: 3}
       propertyPath: m_Name
       value: PF Props Bush T4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 4bd7b41600416b54395bf9936a05dc8e, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 4bd7b41600416b54395bf9936a05dc8e, type: 3}
       propertyPath: m_LocalScale.x
@@ -16345,16 +18045,114 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalRightWall
       objectReference: {fileID: 0}
+    - target: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1823726227}
   m_SourcePrefab: {fileID: 100100000, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
 --- !u!4 &1823726225 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1418261702392211270, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
   m_PrefabInstance: {fileID: 1823726224}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1823726227
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20162486}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!1 &1834593258 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 370031253}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1834593260
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834593258}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!1 &1846049373 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 367141493}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1846049375
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846049373}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1860859910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16366,6 +18164,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: 9e7797bb065982d4497d030f065d6e2f, type: 3}
       propertyPath: m_Name
       value: PF Props Tree T3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 9e7797bb065982d4497d030f065d6e2f, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 9e7797bb065982d4497d030f065d6e2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16417,6 +18219,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2055102311959635375, guid: 9e7797bb065982d4497d030f065d6e2f, type: 3}
   m_PrefabInstance: {fileID: 1860859910}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1862427468 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 749282514}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1862427470
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862427468}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &1885372588 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3068222854693212933, guid: c5234bad7b58657408c78ee7e2c50d26, type: 3}
@@ -16437,6 +18271,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
       propertyPath: m_Name
       value: PF Props Bush T1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: a0a71fda412ad0941ab44f1732ea4c1e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16495,6 +18333,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalLeftWall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     - target: {fileID: 5964609822029538151, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.998646
@@ -16538,13 +18380,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1895540272}
   m_SourcePrefab: {fileID: 100100000, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
 --- !u!4 &1895540270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5964609822029538151, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
   m_PrefabInstance: {fileID: 1895540269}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1895540272
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735486}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1905230150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16604,6 +18476,10 @@ PrefabInstance:
     - target: {fileID: 6644944589867386885, guid: 4be821d0b78ad5043985b57b738e951b, type: 3}
       propertyPath: m_Name
       value: PF Gate T1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644944589867386885, guid: 4be821d0b78ad5043985b57b738e951b, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16739,6 +18615,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8175971909813344115, guid: 3c4567a2a810101499305840ddc06201, type: 3}
   m_PrefabInstance: {fileID: 1907222123}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1908381136 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8861359933066061902, guid: 1a1c14637a472ce4cb099b532af4089f, type: 3}
+  m_PrefabInstance: {fileID: 111182750}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1908381138
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908381136}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1915853218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16866,6 +18774,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Bush T4 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 4bd7b41600416b54395bf9936a05dc8e, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 4bd7b41600416b54395bf9936a05dc8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.204415
@@ -16989,6 +18901,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: 9e7797bb065982d4497d030f065d6e2f, type: 3}
       propertyPath: m_Name
       value: PF Props Tree T3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 9e7797bb065982d4497d030f065d6e2f, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 9e7797bb065982d4497d030f065d6e2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17182,6 +19098,38 @@ Transform:
   - {fileID: 823018457}
   m_Father: {fileID: 1498472105}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1978016625 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3852636979587105498, guid: c06baa7ae58932640811fe0c3c949095, type: 3}
+  m_PrefabInstance: {fileID: 1015052272}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1978016627
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978016625}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1981064203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17233,6 +19181,10 @@ PrefabInstance:
     - target: {fileID: 5393793503342774908, guid: c11374ce305e5a14fb710202cc22e000, type: 3}
       propertyPath: m_Name
       value: LongWall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393793503342774908, guid: c11374ce305e5a14fb710202cc22e000, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17358,6 +19310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LongWall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5393793503342774908, guid: c11374ce305e5a14fb710202cc22e000, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17420,16 +19376,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1995608984}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &1995608982 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6439640306188552767, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
   m_PrefabInstance: {fileID: 1995608981}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1995608984
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328267374}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1997975983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17482,16 +19472,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalRightWall
       objectReference: {fileID: 0}
+    - target: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1997975986}
   m_SourcePrefab: {fileID: 100100000, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
 --- !u!4 &1997975984 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1418261702392211270, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
   m_PrefabInstance: {fileID: 1997975983}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1997975986
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015226356}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &2011630585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17606,16 +19630,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorizontalLineWall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2012116330}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
 --- !u!4 &2012116328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6439640306188552767, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
   m_PrefabInstance: {fileID: 2012116327}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &2012116330
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783552525}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2023980939
 GameObject:
   m_ObjectHideFlags: 3
@@ -17887,16 +19945,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalRightWall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2057631343}
   m_SourcePrefab: {fileID: 100100000, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
 --- !u!4 &2057631341 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1418261702392211270, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
   m_PrefabInstance: {fileID: 2057631340}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &2057631343
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450257128}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &2059782616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18069,6 +20161,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8175971909813344115, guid: 3c4567a2a810101499305840ddc06201, type: 3}
   m_PrefabInstance: {fileID: 2068268276}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2068713137 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8596266997526994086, guid: 0fd23fc7f1706a14ab380228f01deff6, type: 3}
+  m_PrefabInstance: {fileID: 1043373552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &2068713139
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068713137}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &2069013434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18080,6 +20204,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: 4bd7b41600416b54395bf9936a05dc8e, type: 3}
       propertyPath: m_Name
       value: PF Props Bush T4 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 4bd7b41600416b54395bf9936a05dc8e, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 4bd7b41600416b54395bf9936a05dc8e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18131,6 +20259,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2055102311959635375, guid: 4bd7b41600416b54395bf9936a05dc8e, type: 3}
   m_PrefabInstance: {fileID: 2069013434}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2070173159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3235492253423028801, guid: 39824b31eda1c554b9037b3e6ae02e45, type: 3}
+  m_PrefabInstance: {fileID: 439450706}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &2070173161
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070173159}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &2095966767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18395,6 +20555,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Bush T2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 5b94bf9107369684a8153921f763da38, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 5b94bf9107369684a8153921f763da38, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.8079404
@@ -18563,6 +20727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Stone Bench W (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: 8eb546cfc24c8c24196899cee5797135, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18583,6 +20751,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8875025802310966352, guid: 984321f84bb099440a5bff2fcc23b2b2, type: 3}
   m_PrefabInstance: {fileID: 610953564}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &2118070670
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624288202}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &2119407516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18635,6 +20830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShortWall1
       objectReference: {fileID: 0}
+    - target: {fileID: 3010991003153522167, guid: 2307ee3b9caba8f41959b495e37f7001, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18642,6 +20841,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3010991003153522167, guid: 2307ee3b9caba8f41959b495e37f7001, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2119407519}
+    - targetCorrespondingSourceObject: {fileID: 3010991003153522167, guid: 2307ee3b9caba8f41959b495e37f7001, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2119407521}
   m_SourcePrefab: {fileID: 100100000, guid: 2307ee3b9caba8f41959b495e37f7001, type: 3}
 --- !u!4 &2119407517 stripped
 Transform:
@@ -18693,6 +20895,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3195567, y: 1.7600696}
   m_EdgeRadius: 0
+--- !u!50 &2119407521
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606826406}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &2123177412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18744,6 +20973,10 @@ PrefabInstance:
     - target: {fileID: 5393793503342774908, guid: c11374ce305e5a14fb710202cc22e000, type: 3}
       propertyPath: m_Name
       value: LongWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393793503342774908, guid: c11374ce305e5a14fb710202cc22e000, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18850,6 +21083,10 @@ PrefabInstance:
     - target: {fileID: 2055102311959635369, guid: b823debd04fd63f4d8e579210fe0ff20, type: 3}
       propertyPath: m_Name
       value: PF Props Road Sign E
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: b823debd04fd63f4d8e579210fe0ff20, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: b823debd04fd63f4d8e579210fe0ff20, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19033,6 +21270,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6075975974933568967, guid: 78e9efbdf9b33994da8dfbe530f65e5e, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
+      objectReference: {fileID: 0}
     - target: {fileID: 6075975974975622417, guid: 78e9efbdf9b33994da8dfbe530f65e5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -19076,6 +21317,10 @@ PrefabInstance:
     - target: {fileID: 6075975974975622418, guid: 78e9efbdf9b33994da8dfbe530f65e5e, type: 3}
       propertyPath: m_Name
       value: FirstStairs
+      objectReference: {fileID: 0}
+    - target: {fileID: 6075975975660753996, guid: 78e9efbdf9b33994da8dfbe530f65e5e, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19133,6 +21378,10 @@ PrefabInstance:
     - target: {fileID: 5830985496270386004, guid: 019ab1af1d7a4b742a982c009534c058, type: 3}
       propertyPath: m_Name
       value: PF Grass E
+      objectReference: {fileID: 0}
+    - target: {fileID: 5830985496270386004, guid: 019ab1af1d7a4b742a982c009534c058, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19966,6 +22215,10 @@ PrefabInstance:
     - target: {fileID: 5393793503342774908, guid: c11374ce305e5a14fb710202cc22e000, type: 3}
       propertyPath: m_Name
       value: LongWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393793503342774908, guid: c11374ce305e5a14fb710202cc22e000, type: 3}
+      propertyPath: m_TagString
+      value: MapBoundary
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
