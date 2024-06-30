@@ -37,13 +37,19 @@ public class Enemy : MonoBehaviour {
     private List<Enemy> allEnemies;
     private Vector2 movementDirection;
 
+    private float movementErrorInterval = 0.02f;
+
     private Rigidbody2D rb;
+
+    private Animator myAnimator;
 
     private void Awake() {
         audioSource = GetComponent<AudioSource>();
         
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        myAnimator = GetComponent<Animator>();
     }
 
     void Start() {
@@ -54,6 +60,11 @@ public class Enemy : MonoBehaviour {
     }
  
     void Update() {
+        if (ShouldFlip())
+        {
+            Flip();
+        }
+
         UpdateMovement();
         HandleShooting();
     }
@@ -68,14 +79,29 @@ public class Enemy : MonoBehaviour {
         }
     }
 
+    private bool ShouldFlip()
+    {
+        return transform.right.x * movementDirection.x < 0;
+    }
+
+    private void Flip()
+    {
+        transform.right = -transform.right;
+    }
+
 
     private void UpdateMovement() {
+        float previousMovimentPosition = movementDirection.x;
         movementDirection = CalculateMovementDirection();
         MoveAwayFromOtherEnemies();
 
-        if (movementDirection != Vector2.zero) {
+        if (movementDirection != Vector2.zero && (Mathf.Abs(previousMovimentPosition - movementDirection.x) > movementErrorInterval)) {
+            myAnimator.SetBool("IsMoving", true);
             movementDirection.Normalize();
             transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + movementDirection, speed * Time.deltaTime);
+        } else
+        {
+            myAnimator.SetBool("IsMoving", false);
         }
     }
 
@@ -139,17 +165,23 @@ public class Enemy : MonoBehaviour {
     }
 
     private IEnumerator FlashOnDamage() {
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        if (spriteRenderer != null) {
-            spriteRenderer.color = Color.red;
-            yield return new WaitForSeconds(0.1f);
-            spriteRenderer.color = Color.white;
-        }
+
+        myAnimator.SetBool("WasHit", true);
+        yield return new WaitForSeconds(0.2f);
+        myAnimator.SetBool("WasHit", false);
     }
 
-    private void Die() {
+    private void Die()
+    {
         player.AddScore(scorePerKill);
         PlayDeathAudioClip();
+        StartCoroutine(AnimationDie());
+    }
+
+    private IEnumerator AnimationDie()
+    {
+        myAnimator.SetBool("IsDead", true);
+        yield return new WaitForSeconds(0.15f);
         Destroy(gameObject);
     }
 
