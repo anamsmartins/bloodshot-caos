@@ -181,7 +181,7 @@ public class Enemy : MonoBehaviour {
     private IEnumerator AnimationDie()
     {
         myAnimator.SetBool("IsDead", true);
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
 
