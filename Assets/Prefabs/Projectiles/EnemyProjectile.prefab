@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  damage: 5
+  damage: 1
   shootAudioClip: {fileID: 8300000, guid: 0aeec1adbfcd82c499edba9010f32fb2, type: 3}
 --- !u!82 &3117068804040688531
 AudioSource:

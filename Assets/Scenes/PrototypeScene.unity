@@ -770,7 +770,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &178951055
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4353,12 +4353,16 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 993984980519418304, guid: d44cfdb29f8b3a440993b4312c5f7da3, type: 3}
+      propertyPath: healCost
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 993984980519418304, guid: d44cfdb29f8b3a440993b4312c5f7da3, type: 3}
       propertyPath: gameInput
       value: 
       objectReference: {fileID: 160128647}
     - target: {fileID: 993984980519418304, guid: d44cfdb29f8b3a440993b4312c5f7da3, type: 3}
       propertyPath: maxHealth
-      value: 10000
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 993984980519418304, guid: d44cfdb29f8b3a440993b4312c5f7da3, type: 3}
       propertyPath: gameScoreText
@@ -4372,6 +4376,10 @@ PrefabInstance:
       propertyPath: gameScorePanel
       value: 
       objectReference: {fileID: 178951054}
+    - target: {fileID: 993984980519418304, guid: d44cfdb29f8b3a440993b4312c5f7da3, type: 3}
+      propertyPath: heartsGameObject
+      value: 
+      objectReference: {fileID: 1125910410}
     - target: {fileID: 993984980519418304, guid: d44cfdb29f8b3a440993b4312c5f7da3, type: 3}
       propertyPath: shootingInterval
       value: 1

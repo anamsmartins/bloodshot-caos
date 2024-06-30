@@ -18,8 +18,9 @@ public class Player : MonoBehaviour {
     [SerializeField] private Image bloodTankImage = null;
 
     [Header("Health")]
-    [SerializeField] private int maxHealth;
+    [SerializeField] private int maxHealth = 5;
     [SerializeField] private int healCost;
+    [SerializeField] private GameObject heartsGameObject = null;
 
     [Header("Scoring")]
     [SerializeField] private int score = 0;
@@ -78,6 +79,7 @@ public class Player : MonoBehaviour {
         currentBloodTank = maxBloodTank;
         UpdateBloodTankUI(currentBloodTank);
         UpdateScoreText(score);
+        UpdateHearts();
     }
 
     private void Update() {
@@ -252,6 +254,7 @@ public class Player : MonoBehaviour {
 
     public void TakeDamage(int damage) {
         currentHealth -= damage;
+        UpdateHearts();
         StartCoroutine(FlashOnDamage());
 
 
@@ -271,10 +274,18 @@ public class Player : MonoBehaviour {
         }
     }
 
+    private IEnumerator DieAnimation()
+    {
+        Debug.Log("Died");
+        myAnimator.SetBool("Died", true);
+        yield return new WaitForSeconds(0.15f);
+        gameObject.SetActive(false);
+    }
+
     private void Die() {
         //Destroy(gameObject);
         PlayDeathAudioClip();
-        gameObject.SetActive(false);
+        StartCoroutine(DieAnimation());
     }
 
     private void PlayDeathAudioClip()
@@ -332,6 +343,30 @@ public class Player : MonoBehaviour {
         gameScorePanel.SetActive(false);
         gameScoreUGUI.CrossFadeAlpha(1f, 0f, false);
         fadeGameScoreCoroutine = null;
+    }
+
+    private void UpdateHearts()
+    {
+        Image[] heartImages = heartsGameObject.GetComponentsInChildren<Image>();
+
+        for (int i = maxHealth-1; i > -1; i--)
+        {
+            if (i < currentHealth)
+            {
+                ShowHeart(heartImages[i], 1);
+            }
+            else
+            {
+                ShowHeart(heartImages[i], 0);
+            }
+        }
+    }
+
+    private void ShowHeart(Image heartImage, int alpha)
+    {
+        UnityEngine.Color invisibleColor = heartImage.color;
+        invisibleColor.a = alpha;
+        heartImage.color = invisibleColor;
     }
 
     public bool UseBloodForShooting(int amount) {
