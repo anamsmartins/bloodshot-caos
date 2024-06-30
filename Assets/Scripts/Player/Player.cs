@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,15 +21,17 @@ public class Player : MonoBehaviour {
     [SerializeField] private int healCost;
 
     [Header("Scoring")]
-    [SerializeField] private int score;
+    [SerializeField] private int score = 0;
     [SerializeField] private int healScore;
     [SerializeField] private int bloodPickupScore;
+    [SerializeField] private GameObject gameScorePanel = null;
+    [SerializeField] private float scoreShowHideInterval = 1f;
 
     [Header("Shooting")]
     [SerializeField] private GameObject playerProjectilePrefab;
     [SerializeField] private Transform shootPosition;
     [SerializeField] private int ammoCost = 5;
-    [SerializeField] public float shootingInterval = 0.1f;
+    [SerializeField] public float shootingInterval = 0.3f;
 
     [Header("Melee Attack")]
     [SerializeField] private float meleeRange = 1f;
@@ -56,10 +59,14 @@ public class Player : MonoBehaviour {
 
     private bool canShoot = true;
 
+    private TMP_Text gameScoreText = null;
+
     private void Awake()
     {
         myAnimator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+
+        gameScoreText = gameScorePanel.GetComponentInChildren<TMP_Text>();
     }
 
 
@@ -68,6 +75,7 @@ public class Player : MonoBehaviour {
 
         currentBloodTank = maxBloodTank;
         UpdateBloodTankUI(currentBloodTank);
+        UpdateScoreText(score);
     }
 
     private void Update() {
@@ -144,9 +152,7 @@ public class Player : MonoBehaviour {
         {
             previousBloodTank = Mathf.Min(30f, targetBloodTank - amount);
         }
-        float duration = 1f;
-
-        Debug.Log("Duration: " + duration);
+        float duration = shootingInterval;
 
         while (elapsedTime < duration)
         {
@@ -293,6 +299,24 @@ public class Player : MonoBehaviour {
         audioSource.PlayOneShot(bloodPickUpAudioClip);
     }
 
+    private void UpdateScoreText(int score)
+    {
+        gameScoreText.text = "Score: " + score.ToString();
+
+        if (!gameScorePanel.activeSelf)
+        {
+            StartCoroutine(ShowScoreTextForTimeInterval());
+        }
+    }
+
+    private IEnumerator ShowScoreTextForTimeInterval()
+    {
+        gameScorePanel.SetActive(true);
+        yield return new WaitForSeconds(scoreShowHideInterval);
+        gameScorePanel.SetActive(false);
+
+    }
+
     public bool UseBloodForShooting(int amount) {
         if (currentBloodTank >= amount) {
             currentBloodTank -= amount;
@@ -321,5 +345,6 @@ public class Player : MonoBehaviour {
 
     public void AddScore(int amount) {
         score += amount;
+        UpdateScoreText(score);
     }
 }
