@@ -64,12 +64,17 @@ public class Player : MonoBehaviour {
     private TMP_Text gameScoreText = null;
     private Coroutine fadeGameScoreCoroutine = null;
 
+    private Rigidbody2D rb;
+
     private void Awake()
     {
         myAnimator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
 
         gameScoreText = gameScorePanel.GetComponentInChildren<TMP_Text>();
+
+        rb = GetComponent<Rigidbody2D>();
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
 

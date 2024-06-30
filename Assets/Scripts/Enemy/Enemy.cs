@@ -37,8 +37,13 @@ public class Enemy : MonoBehaviour {
     private List<Enemy> allEnemies;
     private Vector2 movementDirection;
 
+    private Rigidbody2D rb;
+
     private void Awake() {
         audioSource = GetComponent<AudioSource>();
+        
+        rb = GetComponent<Rigidbody2D>();
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     void Start() {
