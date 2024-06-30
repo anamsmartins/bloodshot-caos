@@ -281,7 +281,7 @@ public class Player : MonoBehaviour {
     private IEnumerator DieAnimation()
     {
         myAnimator.SetBool("Died", true);
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(1f);
         gameObject.SetActive(false);
     }
 
