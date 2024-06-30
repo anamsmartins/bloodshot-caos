@@ -53,6 +53,7 @@ AudioMixerGroupController:
   m_GroupID: 4f1f9c269eb38084fa5e6dfe33cfb13c
   m_Children:
   - {fileID: 991870069432110531}
+  - {fileID: 8300445713735033681}
   m_Volume: a3ac8b6f49001a54491b691fdae4a44e
   m_Pitch: 91a0ef07ca3e9634eb77d9a2f1af6bac
   m_Send: 00000000000000000000000000000000
@@ -121,6 +122,7 @@ AudioMixerController:
     - 171a9d123c750604f8f207be801a3adc
     - e4315cb048c3d0b439080064fdabb0fa
     - 6c981c94d5e920542af685cbbbb10243
+    - c3450ceaecd2adb49b10b16eb4a1c3fd
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -190,6 +192,20 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &2482978174791055128
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 4e7520e3769c1934d9b41e9dbd2c171a
+  m_EffectName: Attenuation
+  m_MixLevel: dbca661b8207c2f499283b54cffb9cf2
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!243 &2991705549434170327
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -273,6 +289,25 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -4126170699974978346}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &8300445713735033681
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Blood Pick Up
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: c3450ceaecd2adb49b10b16eb4a1c3fd
+  m_Children: []
+  m_Volume: 304461df36214b843b3b462a2ce7f4da
+  m_Pitch: 7e999e05999dbe04ebdcb66f7ef6ab6a
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 2482978174791055128}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0

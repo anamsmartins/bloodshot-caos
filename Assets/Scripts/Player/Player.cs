@@ -46,7 +46,6 @@ public class Player : MonoBehaviour {
     [SerializeField] private AudioClip hitAudioClip;
     [SerializeField] private AudioClip deathAudioClip;
     [SerializeField] private AudioClip healAudioClip;
-    [SerializeField] private AudioClip bloodPickUpAudioClip;
     private AudioSource audioSource = null;
 
     private int currentHealth;
@@ -312,10 +311,6 @@ public class Player : MonoBehaviour {
         audioSource.PlayOneShot(healAudioClip);
     }
 
-    private void playBloodPickUpAudioClip() {
-        audioSource.PlayOneShot(bloodPickUpAudioClip);
-    }
-
     private void UpdateScoreText(int score)
     {
         gameScoreText.text = "Score: " + score.ToString();
@@ -396,7 +391,6 @@ public class Player : MonoBehaviour {
         var previousBloodTank = currentBloodTank;
         currentBloodTank = Mathf.Min(maxBloodTank, currentBloodTank + amount);
         AddScore(bloodPickupScore);
-        playBloodPickUpAudioClip();
         StartCoroutine(UpdateBloodTankOverTime(currentBloodTank-previousBloodTank, "increase"));
     }
 

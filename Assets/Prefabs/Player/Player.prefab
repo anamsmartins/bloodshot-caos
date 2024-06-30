@@ -108,7 +108,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1746326655
-  m_SortingLayer: 2
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b9e10ee9a27872e4a99b77fb83951785, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -312,18 +312,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7731133ae4058694587b5e9642072863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloodTank: 30
-  moveSpeed: 10
-  maxHealth: 30
+  moveSpeed: 9
+  currentBloodTank: 30
+  maxBloodTank: 30
+  bloodTankImage: {fileID: 0}
+  maxHealth: 5
   healCost: 10
+  heartsGameObject: {fileID: 0}
   score: 0
   healScore: 15
   bloodPickupScore: 30
+  gameScorePanel: {fileID: 0}
+  scoreShowHideInterval: 1
   playerProjectilePrefab: {fileID: 4059073418233113821, guid: 8caf53fa43db06442b1686addbf36bff, type: 3}
   shootPosition: {fileID: 5837875126759364525}
-  ammoCost: 5
+  ammoCost: 2
+  shootingInterval: 0.3
   meleeRange: 1.2
-  meleeDamage: 10
+  meleeDamage: 1
   gameInput: {fileID: 0}
   hitAudioClip: {fileID: 8300000, guid: 7030968d1c076324480732b5672cca53, type: 3}
   deathAudioClip: {fileID: 8300000, guid: a87995ffa637a5c42b70c1067577c85f, type: 3}

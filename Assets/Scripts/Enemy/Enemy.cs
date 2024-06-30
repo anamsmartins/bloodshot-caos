@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour {
     private List<Enemy> allEnemies;
     private Vector2 movementDirection;
 
-    private float movementErrorInterval = 0.02f;
+    private float movementErrorInterval = 0.001f;
 
     private Rigidbody2D rb;
 
