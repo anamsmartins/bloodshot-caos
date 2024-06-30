@@ -276,7 +276,6 @@ public class Player : MonoBehaviour {
 
     private IEnumerator DieAnimation()
     {
-        Debug.Log("Died");
         myAnimator.SetBool("Died", true);
         yield return new WaitForSeconds(0.15f);
         gameObject.SetActive(false);
@@ -384,6 +383,7 @@ public class Player : MonoBehaviour {
             currentBloodTank -= healCost;
             AddScore(healScore);
             playHealAudioClip();
+            UpdateHearts();
         }
     }
 

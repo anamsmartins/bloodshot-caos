@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8994864304928372906}
   - component: {fileID: 1993573311623091231}
   - component: {fileID: 2121038141843936833}
+  - component: {fileID: 2340325022315379557}
   m_Layer: 0
   m_Name: BloodDrop
   m_TagString: Untagged
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.4716981, g: 0.23807405, b: 0.23807405, a: 1}
+  m_Sprite: {fileID: 528365197, guid: 80a031f41b8476c42899581f797e152f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -162,3 +163,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodAmount: 8
+--- !u!95 &2340325022315379557
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2845103136914795202}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aca9289b9343bc348bedcb81f4771a22, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
