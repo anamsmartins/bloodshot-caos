@@ -58,8 +58,14 @@ TagManager:
   - name: Plant
     uniqueID: 660391581
     locked: 0
+  - name: Blood Drop Pick Up
+    uniqueID: 1870610883
+    locked: 0
   - name: Player
     uniqueID: 1746326655
+    locked: 0
+  - name: Enemies
+    uniqueID: 1042654005
     locked: 0
   - name: Tree
     uniqueID: 3196590561

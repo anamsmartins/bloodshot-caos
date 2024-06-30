@@ -219,19 +219,21 @@ public class Player : MonoBehaviour {
 
     private void Shoot() {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = (mousePosition - shootPosition.position).normalized;
-        GameObject projectileInstance = Instantiate(playerProjectilePrefab, transform.position, Quaternion.identity);
+        Vector2 direction = (mousePosition - transform.position).normalized;
+        Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
+        GameObject projectileInstance = Instantiate(playerProjectilePrefab, spawnPosition, Quaternion.identity);
         PlayerProjectile projectileScript = projectileInstance.GetComponent<PlayerProjectile>();
         projectileScript.Initialize(direction);
     }
 
-    private void ShootJoystick()
-    {
+    private void ShootJoystick() {
         Vector2 shootDirections = gameInput.GetShootVectorNormalized();
-        GameObject projectileInstance = Instantiate(playerProjectilePrefab, transform.position, Quaternion.identity);
+        Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
+        GameObject projectileInstance = Instantiate(playerProjectilePrefab, spawnPosition, Quaternion.identity);
         PlayerProjectile projectileScript = projectileInstance.GetComponent<PlayerProjectile>();
         projectileScript.Initialize(shootDirections);
     }
+
 
     private void MeleeAttack() {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, meleeRange);
