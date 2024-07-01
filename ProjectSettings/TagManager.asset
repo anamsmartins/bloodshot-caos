@@ -71,9 +71,15 @@ TagManager:
   - name: Enemies
     uniqueID: 1042654005
     locked: 0
+  - name: FrontProps
+    uniqueID: 1130569249
+    locked: 0
   - name: Tree
     uniqueID: 3196590561
     locked: 0
   - name: Projectiles
     uniqueID: 3695455229
+    locked: 0
+  - name: UI
+    uniqueID: 901179183
     locked: 0

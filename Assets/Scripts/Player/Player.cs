@@ -5,6 +5,7 @@ using System.Drawing;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using static Cinemachine.CinemachineTriggerAction.ActionSettings;
 
@@ -65,6 +66,8 @@ public class Player : MonoBehaviour {
 
     private Rigidbody2D rb;
 
+    private Interaction myInteraction = null;
+
     private void Awake()
     {
         myAnimator = GetComponent<Animator>();
@@ -74,6 +77,8 @@ public class Player : MonoBehaviour {
 
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        myInteraction = GetComponent<Interaction>();
     }
 
 
@@ -89,6 +94,7 @@ public class Player : MonoBehaviour {
         HandleHealing();
         HandleAttacks();
         HandleAnimate();
+        HandleInteract();
     }
 
     private void HandleAnimate() {
@@ -169,8 +175,6 @@ public class Player : MonoBehaviour {
             yield return null;
             elapsedTime += Time.deltaTime;
         }
-
-        //previousBloodTank = targetBloodTank;
     }
 
     private void HandleHealing() {
@@ -394,6 +398,13 @@ public class Player : MonoBehaviour {
         StartCoroutine(UpdateBloodTankOverTime(currentBloodTank-previousBloodTank, "increase"));
     }
 
+    public void UpdateBloodTankToMax()
+    {
+        var previousBloodTank = currentBloodTank;
+        currentBloodTank = maxBloodTank;
+        StartCoroutine(UpdateBloodTankOverTime(currentBloodTank - previousBloodTank, "increase"));
+    }
+
     public void AddScore(int amount) {
         score += amount;
         UpdateScoreText(score);
@@ -413,5 +424,15 @@ public class Player : MonoBehaviour {
 
     private void OnDisable() {
         SavePlayerStats();
+    }
+
+    private void HandleInteract()
+    {
+        if (gameInput.IsInteracting()) {
+            if (myInteraction.CanInteract())
+            {
+                myInteraction.Interact();
+            }
+        }
     }
 }
