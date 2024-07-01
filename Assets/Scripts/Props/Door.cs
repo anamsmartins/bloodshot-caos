@@ -31,7 +31,7 @@ public class Door : MonoBehaviour {
         if (currentDoor != null) {
             Destroy(currentDoor);
         }
-        
+
         open = true;
         currentDoor = Instantiate(openDoorPrefab, transform.position, transform.rotation, transform);
     }
