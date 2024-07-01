@@ -36,4 +36,8 @@ public class GameInput : MonoBehaviour {
     public bool IsHealing() {
         return playerInputActions.Player.Heal.triggered;
     }
+
+    public bool IsInteracting() {
+        return playerInputActions.Player.Interact.triggered;
+    }
 }
