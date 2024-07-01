@@ -78,9 +78,10 @@ public class Player : MonoBehaviour {
 
 
     void Start() {
-        currentHealth = maxHealth;
+        score = PlayerStats.Score;
+        currentHealth = PlayerStats.Health > 0 ? PlayerStats.Health : maxHealth;
+        currentBloodTank = PlayerStats.BloodTank > 0 ? PlayerStats.BloodTank : maxBloodTank;
 
-        currentBloodTank = maxBloodTank;
         UpdateBloodTankUI(currentBloodTank);
         UpdateScoreText(score);
         UpdateHearts();
@@ -399,5 +400,15 @@ public class Player : MonoBehaviour {
     public void AddScore(int amount) {
         score += amount;
         UpdateScoreText(score);
+    }
+
+    private void SavePlayerStats() {
+        PlayerStats.Score = score;
+        PlayerStats.Health = currentHealth;
+        PlayerStats.BloodTank = currentBloodTank;
+    }
+
+    private void OnDisable() {
+        SavePlayerStats();
     }
 }

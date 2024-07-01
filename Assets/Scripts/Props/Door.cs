@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour {
     public static Door Instance { get; private set; }
 
     [SerializeField] private GameObject closedDoorPrefab;
     [SerializeField] private GameObject openDoorPrefab;
+    private bool open = false;
 
     private GameObject currentDoor;
 
@@ -29,7 +31,25 @@ public class Door : MonoBehaviour {
         if (currentDoor != null) {
             Destroy(currentDoor);
         }
-
+        
+        open = true;
         currentDoor = Instantiate(openDoorPrefab, transform.position, transform.rotation, transform);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.CompareTag("Player")) {
+            if (open) {
+                SavePlayerStats(collision.GetComponent<Player>());
+                LoadNextScene();
+            }
+        }
+    }
+
+    private void SavePlayerStats(Player player) {
+        player.SendMessage("SavePlayerStats");
+    }
+
+    private void LoadNextScene() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
