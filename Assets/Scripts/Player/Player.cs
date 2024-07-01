@@ -6,6 +6,7 @@ using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static Cinemachine.CinemachineTriggerAction.ActionSettings;
 
@@ -293,6 +294,11 @@ public class Player : MonoBehaviour {
         //Destroy(gameObject);
         PlayDeathAudioClip();
         StartCoroutine(DieAnimation());
+        LoadDeathScene(); 
+    }
+
+    private void LoadDeathScene() {
+        SceneManager.LoadScene("You Lose");
     }
 
     private void PlayDeathAudioClip()
