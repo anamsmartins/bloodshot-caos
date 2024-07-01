@@ -16,8 +16,8 @@ TagManager:
   - Map
   - Wall
   - Stairs
-  - 
-  - 
+  - NPC
+  - Slimes
   - 
   - 
   - 
@@ -60,6 +60,9 @@ TagManager:
     locked: 0
   - name: Blood Drop Pick Up
     uniqueID: 1870610883
+    locked: 0
+  - name: Slimes
+    uniqueID: 2825920499
     locked: 0
   - name: Player
     uniqueID: 1746326655
