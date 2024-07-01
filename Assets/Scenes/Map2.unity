@@ -2298,7 +2298,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1444617898}
     m_Modifications:
     - target: {fileID: 6644944589867386884, guid: b95acdc3b0c1a444c87723520fbab2f0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2318,15 +2318,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6644944589867386884, guid: b95acdc3b0c1a444c87723520fbab2f0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6644944589867386884, guid: b95acdc3b0c1a444c87723520fbab2f0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6644944589867386884, guid: b95acdc3b0c1a444c87723520fbab2f0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6644944589867386884, guid: b95acdc3b0c1a444c87723520fbab2f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2349,6 +2349,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b95acdc3b0c1a444c87723520fbab2f0, type: 3}
+--- !u!4 &163463541 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6644944589867386884, guid: b95acdc3b0c1a444c87723520fbab2f0, type: 3}
+  m_PrefabInstance: {fileID: 163463540}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &164852274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10326,6 +10331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   closedDoorPrefab: {fileID: 2055102311959635369, guid: 6a057178eb028e94fb93bf39262ea3e8, type: 3}
   openDoorPrefab: {fileID: 2055102311959635369, guid: 8e9c401d7a70ec94d956296ea011f594, type: 3}
+  open: 0
 --- !u!4 &880485592
 Transform:
   m_ObjectHideFlags: 0
@@ -16589,6 +16595,7 @@ Transform:
   - {fileID: 1378686619}
   - {fileID: 118657242}
   - {fileID: 962842375}
+  - {fileID: 163463541}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1455096736 stripped
@@ -21658,7 +21665,9 @@ MonoBehaviour:
   - {fileID: 1055933941}
   - {fileID: 1097658829}
   delayToSpawn: 5
+  delayBetweenSpawns: 10
   enemySpawnConfiguration: {fileID: 11400000, guid: 11692a1e7fbcefd439849f3ac26e3198, type: 2}
+  bossSceneName: MapBoss
 --- !u!4 &1902791015
 Transform:
   m_ObjectHideFlags: 0
@@ -24594,4 +24603,3 @@ SceneRoots:
   - {fileID: 2099141250}
   - {fileID: 1902791015}
   - {fileID: 880485592}
-  - {fileID: 163463540}

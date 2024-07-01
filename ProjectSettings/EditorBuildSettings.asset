@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MapBoss.unity
     guid: 35015d7cd1d0b7a41ab34626b963bc06
+  - enabled: 1
+    path: Assets/Scenes/You Win.unity
+    guid: c1d7c20ada81b68469ba3f507c447f1e
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 0377267ddbcf73e4c996cc83fddfcb91, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 01da65597b5eaf343952aafc1c603795, type: 2}
