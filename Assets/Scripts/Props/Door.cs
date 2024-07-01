@@ -10,6 +10,7 @@ public class Door : MonoBehaviour {
 
     private GameObject currentDoor;
     private GameObject bossGameObject;
+    private bool wasBossSet = false;
 
     private void Awake() {
         if (Instance == null) {
@@ -59,7 +60,7 @@ public class Door : MonoBehaviour {
     }
 
     private void Update() {
-        if (bossGameObject == null && !open) {
+        if (wasBossSet == true && bossGameObject == null && !open) {
             Open();
         }
     }
@@ -67,5 +68,6 @@ public class Door : MonoBehaviour {
 
     public void SetBossGameObject(GameObject boss) {
         bossGameObject = boss;
+        wasBossSet = true;
     }
 }
