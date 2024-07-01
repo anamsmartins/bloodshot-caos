@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -599512067
-  m_SortingLayer: 10
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b9e749875b4dfaf4793f598c32d72e25, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 12
-  damage: 1
+  damage: 111
   shootAudioClip: {fileID: 8300000, guid: 59baed79cd0dd0e488d73ebd6c407f02, type: 3}
 --- !u!82 &-1560998244459959688
 AudioSource:

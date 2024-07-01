@@ -9,8 +9,8 @@ public class Slime : MonoBehaviour
     [SerializeField] private float minSpeed = 3f;
     [SerializeField] private float maxSpeed = 5f;
 
-    private Collider2D collider2D = null;
-    private Rigidbody2D rigidbody2D = null;
+    private Collider2D colliderSlime = null;
+    private Rigidbody2D rb = null;
     private Animator myAnimator = null;
 
     private bool isSleeping = true;
@@ -22,8 +22,8 @@ public class Slime : MonoBehaviour
 
     private void Awake()
     {
-        collider2D = GetComponent<Collider2D>();
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        colliderSlime = GetComponent<Collider2D>();
+        rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
     }
 

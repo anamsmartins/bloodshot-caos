@@ -57,6 +57,7 @@ public class Enemy : MonoBehaviour {
         shotTimer = shotCooldown;
         currentHealth = maxHealth;
         allEnemies = new List<Enemy>(FindObjectsOfType<Enemy>());
+        EnemyManager.Instance.RegisterEnemy(this);
     }
  
     void Update() {
@@ -176,6 +177,7 @@ public class Enemy : MonoBehaviour {
         player.AddScore(scorePerKill);
         PlayDeathAudioClip();
         StartCoroutine(AnimationDie());
+        EnemyManager.Instance.UnregisterEnemy(this);
     }
 
     private IEnumerator AnimationDie()
