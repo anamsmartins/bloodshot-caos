@@ -9,6 +9,7 @@ public class Door : MonoBehaviour {
     [SerializeField] private bool open = false;
 
     private GameObject currentDoor;
+    private GameObject bossGameObject;
 
     private void Awake() {
         if (Instance == null) {
@@ -55,5 +56,16 @@ public class Door : MonoBehaviour {
 
     private void LoadNextScene() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    private void Update() {
+        if (bossGameObject == null && !open) {
+            Open();
+        }
+    }
+
+
+    public void SetBossGameObject(GameObject boss) {
+        bossGameObject = boss;
     }
 }
