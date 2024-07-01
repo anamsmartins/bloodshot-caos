@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: a638966daaad90c42bb2791f4aad0f4b
+  - enabled: 1
     path: Assets/Scenes/Map1.unity
     guid: 359e0c7c1832e7449b342a20274f169e
   - enabled: 1
@@ -20,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MapBoss.unity
     guid: 35015d7cd1d0b7a41ab34626b963bc06
+  - enabled: 1
+    path: Assets/Scenes/PauseMenu.unity
+    guid: 005b463e71e88a34b8c74849cd5f4c24
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 0377267ddbcf73e4c996cc83fddfcb91, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 01da65597b5eaf343952aafc1c603795, type: 2}
