@@ -6,7 +6,7 @@ public class Door : MonoBehaviour {
 
     [SerializeField] private GameObject closedDoorPrefab;
     [SerializeField] private GameObject openDoorPrefab;
-    private bool open = false;
+    [SerializeField] private bool open = false;
 
     private GameObject currentDoor;
 
@@ -24,7 +24,11 @@ public class Door : MonoBehaviour {
             Destroy(currentDoor);
         }
 
-        currentDoor = Instantiate(closedDoorPrefab, transform.position, transform.rotation, transform);
+        if (!open) {
+            currentDoor = Instantiate(closedDoorPrefab, transform.position, transform.rotation, transform);
+        } else {
+            currentDoor = Instantiate(openDoorPrefab, transform.position, transform.rotation, transform);
+        }
     }
 
     public void Open() {

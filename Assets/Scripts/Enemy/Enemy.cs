@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour {
     [Header("Shooting")]
     [SerializeField] private float shotCooldown;
     [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private bool canShoot = true;
 
     [Header("Scoring")]
     [SerializeField] private int scorePerHit;
@@ -66,8 +67,10 @@ public class Enemy : MonoBehaviour {
             Flip();
         }
 
-        UpdateMovement();
-        HandleShooting();
+        if (canShoot) {
+            UpdateMovement();
+            HandleShooting();
+        }
     }
 
     private void FindPlayer() {
@@ -90,6 +93,13 @@ public class Enemy : MonoBehaviour {
         transform.right = -transform.right;
     }
 
+    public void SetSpeed(float newSpeed) {
+        speed = newSpeed;
+    }
+
+    public void CanShoot(bool canShoot) {
+        this.canShoot = canShoot;
+    }
 
     private void UpdateMovement() {
         float previousMovimentPosition = movementDirection.x;
@@ -100,8 +110,7 @@ public class Enemy : MonoBehaviour {
             myAnimator.SetBool("IsMoving", true);
             movementDirection.Normalize();
             transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + movementDirection, speed * Time.deltaTime);
-        } else
-        {
+        } else {
             myAnimator.SetBool("IsMoving", false);
         }
     }
@@ -148,6 +157,10 @@ public class Enemy : MonoBehaviour {
     }
 
     public void TakeDamage(float damage) {
+        if (!canShoot) {
+            return; 
+        }
+
         currentHealth -= damage;
         player.AddScore(scorePerHit);
         SpawnBloodDrop();
